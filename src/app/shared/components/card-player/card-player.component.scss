@@ -1,0 +1,82 @@
+/* Contenedor de las cards */
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: flex-start;
+    padding: 1rem;
+}
+
+/* Card estilo "streaming app" */
+.card-player {
+    background-color: var(--color-2);
+    width: 180px;
+    height: auto;
+    border-radius: var(--border-radius-1);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.card-player:hover {
+    background-color: #4d4d4d;
+    transform: scale(1.03);
+}
+
+/* Imagen de portada */
+.card-player .cover {
+    width: 100%;
+    height: 270px;
+    object-fit: cover;
+    border-top-left-radius: var(--border-radius-1);
+    border-top-right-radius: var(--border-radius-1);
+}
+
+/* Contenido de texto */
+.card-player .content-player {
+    padding: 0.75rem;
+    font-weight: 600;
+    color: var(--color-4);
+    text-align: center;
+}
+
+/* Contenedor de botones */
+.card-player .buttons-player {
+    display: flex;
+    justify-content: space-around;
+    padding: 0.5rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.card-player:hover .buttons-player {
+    opacity: 1;
+}
+
+/* Botones individuales */
+.card-player .buttons-player button {
+    color: var(--color-4);
+    background-color: var(--color-1);
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fav-btn i.uil-heart-alt {
+    color: yellow; /* Cambiar color del corazón a amarillo cuando es favorito */
+  }
+  
+  .fav-btn i.uil-heart {
+    color: gray; /* Color predeterminado cuando no es favorito */
+  }
+  /* Estilo cuando la card es marcada como favorita */
+.fav-card {
+    background-color: yellow;  /* Cambia a color amarillo cuando es favorita */
+  }

@@ -1,0 +1,23 @@
+import { CommonModule } from '@angular/common';
+import { Component, Input, OnInit } from '@angular/core';
+import { MoviesModel } from '@core/models/movies.model';
+import { CardPlayerComponent } from "../card-player/card-player.component";
+
+@Component({
+  selector: 'app-section-generic',
+  imports: [CommonModule, CardPlayerComponent],
+  templateUrl: './section-generic.component.html',
+  styleUrl: './section-generic.component.scss'
+})
+export class SectionGenericComponent implements OnInit{
+  @Input() title: string = ''
+  @Input() mode: 'small' | 'big' = 'big'
+  @Input() dataMovies: Array<MoviesModel> = []
+
+  constructor(){}
+
+  ngOnInit(): void {
+    
+  }
+
+}

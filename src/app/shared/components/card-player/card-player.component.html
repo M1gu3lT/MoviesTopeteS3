@@ -1,0 +1,48 @@
+
+
+<!-- Diseño del mode (small)-->
+<div *ngIf="mode === 'small'  && !movie.hidden" class="card-player player-small">
+    <img [src]="movie.poster" [alt]="movie.title" class="cover" />
+    <div class="content-player">
+      {{ movie.title }}
+    </div>
+    <div class="buttons-player">
+      <button class="play-btn">
+        <i class="uil" [ngClass]="{ 'uil-play': true }"></i>
+      </button>
+  
+      <!-- Botón favorito -->
+      <button class="fav-btn" (click)="toggleFavorite(movie)">
+        <i class="uil" [ngClass]="{ 'uil-heart': !movie.favorited, 'uil-heart-alt': movie.favorited }"></i>
+      </button>
+  
+      <!-- Botón ocultar -->
+      <button class="hide-btn" (click)="hideMovie(movie)">
+        <i class="uil uil-eye-slash"></i>
+      </button>
+    </div>
+  </div>
+
+<!-- Diseño del mode (big) -->
+<div *ngIf="mode === 'big' && !movie.hidden" class="card-player player-big" [ngClass]="{ 'hidden': movie.hidden }">
+
+    <img [src]="movie.poster" [alt]="movie.title" class="cover" />
+    <div class="content-player">
+      {{ movie.title }}
+    </div>
+    <div class="buttons-player">
+      <button class="play-btn">
+        <i class="uil" [ngClass]="{ 'uil-play': true }"></i>
+      </button>
+  
+      <!-- Botón favorito -->
+      <button class="fav-btn" (click)="toggleFavorite(movie)">
+        <i class="uil" [ngClass]="{ 'uil-heart': !movie.favorited, 'uil-heart-alt': movie.favorited }"></i>
+      </button>
+  
+      <!-- Botón ocultar -->
+      <button class="hide-btn" (click)="hideMovie(movie)">
+        <i class="uil uil-eye-slash"></i>
+      </button>
+    </div>
+  </div>

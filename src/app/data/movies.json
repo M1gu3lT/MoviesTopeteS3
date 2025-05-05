@@ -1,0 +1,129 @@
+{
+    "data": [{
+            "_id": 1,
+            "title": "Inception",
+            "director": "Christopher Nolan",
+            "poster": "https://pics.filmaffinity.com/Origen-652954101-large.jpg",
+            "cast": {
+                "main": "Leonardo DiCaprio",
+                "supporting": ["Joseph Gordon-Levitt", "Elliot Page"],
+                "nationality": "US"
+            },
+            "duration": {
+                "start": 0,
+                "end": 8880
+            },
+            "trailerUrl": "http://localhost:3000/inception-trailer.mp4"
+        },
+        {
+            "_id": 2,
+            "title": "Parasite",
+            "director": "Bong Joon-ho",
+            "poster": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzfjn8HSe873X6M9h4f50GMD3QRRZ_C3nRqg&s",
+            "cast": {
+                "main": "Song Kang-ho",
+                "supporting": ["Lee Sun-kyun", "Cho Yeo-jeong"],
+                "nationality": "KR"
+            },
+            "duration": {
+                "start": 0,
+                "end": 7920
+            },
+            "trailerUrl": "http://localhost:3000/parasite-trailer.mp4"
+        },
+        {
+            "_id": 3,
+            "title": "The Godfather",
+            "director": "Francis Ford Coppola",
+            "poster": "https://m.media-amazon.com/images/I/51rOnIjLqzL._AC_.jpg",
+            "cast": {
+                "main": "Marlon Brando",
+                "supporting": ["Al Pacino", "James Caan"],
+                "nationality": "US"
+            },
+            "duration": {
+                "start": 0,
+                "end": 10500
+            },
+            "trailerUrl": "http://localhost:3000/godfather-trailer.mp4"
+        },
+        {
+          "id": 4,
+          "title": "Interstellar",
+          "director": "Christopher Nolan",
+          "poster": "https://play-lh.googleusercontent.com/Kf_1fCIuuy2ufsEBKwv08e9AvzwrSyCItG6Nsk4C2tGurknKjOS0H8k9KldDPC6hfzc",
+          "cast": {
+            "leadActor": "Matthew McConaughey",
+            "supportingActors": ["Anne Hathaway", "Jessica Chastain"],
+            "originCountry": "US"
+          },
+          "runtimeSeconds": 10140,
+          "trailerUrl": "http://localhost:3000/interstellar-trailer.mp4"
+        },
+        {
+          "id": 5,
+          "title": "Spirited Away",
+          "director": "Hayao Miyazaki",
+          "poster": "https://m.media-amazon.com/images/I/71zqphejhbL._AC_UF894,1000_QL80_.jpg",
+          "cast": {
+            "leadActor": "Rumi Hiiragi",
+            "supportingActors": ["Miyu Irino", "Mari Natsuki"],
+            "originCountry": "JP"
+          },
+          "runtimeSeconds": 7500,
+          "trailerUrl": "http://localhost:3000/spiritedaway-trailer.mp4"
+        },
+        {
+          "id": 6,
+          "title": "Pulp Fiction",
+          "director": "Quentin Tarantino",
+          "poster": "https://m.media-amazon.com/images/I/71c05lTE03L._AC_SL1024_.jpg",
+          "cast": {
+            "leadActor": "John Travolta",
+            "supportingActors": ["Samuel L. Jackson", "Uma Thurman"],
+            "originCountry": "US"
+          },
+          "runtimeSeconds": 9480,
+          "trailerUrl": "http://localhost:3000/pulpfiction-trailer.mp4"
+        },
+        {
+          "id": 7,
+          "title": "The Dark Knight",
+          "director": "Christopher Nolan",
+          "poster": "https://play-lh.googleusercontent.com/auIs5tjWlLYaFPGClZOJ7m5YVbnX6uBvz0X02r8TkwFKdzE53ww2MqWSS9gU0YNqoYwvpg",
+          "cast": {
+            "leadActor": "Christian Bale",
+            "supportingActors": ["Heath Ledger", "Aaron Eckhart"],
+            "originCountry": "US"
+          },
+          "runtimeSeconds": 9120,
+          "trailerUrl": "http://localhost:3000/darkknight-trailer.mp4"
+        },
+        {
+          "id": 8,
+          "title": "Amélie",
+          "director": "Jean-Pierre Jeunet",
+          "poster": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6uUNoS712SdwQgTDdywxlW1n-VinRqfEP5A&s",
+          "cast": {
+            "leadActor": "Audrey Tautou",
+            "supportingActors": ["Mathieu Kassovitz", "Rufus"],
+            "originCountry": "FR"
+          },
+          "runtimeSeconds": 7320,
+          "trailerUrl": "http://localhost:3000/amelie-trailer.mp4"
+        },
+        {
+          "id": 9,
+          "title": "The Matrix",
+          "director": "The Wachowskis",
+          "poster": "https://m.media-amazon.com/images/M/MV5BNGE1YzI4NzMtZTUxNi00Y2I5LTg2MmQtODE0NThmYTFmMDk0XkEyXkFqcGc@._V1_.jpg",
+          "cast": {
+            "leadActor": "Keanu Reeves",
+            "supportingActors": ["Laurence Fishburne", "Carrie-Anne Moss"],
+            "originCountry": "US"
+          },
+          "runtimeSeconds": 8160,
+          "trailerUrl": "http://localhost:3000/matrix-trailer.mp4"
+        }
+    ]
+}
