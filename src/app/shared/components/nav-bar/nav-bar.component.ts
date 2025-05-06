@@ -29,7 +29,7 @@ export class NavBarComponent implements OnInit{
       {
         name: 'Buscar',
         icon: 'uil uil-search',
-        router: ['/', 'history']
+        router: ['/', 'movies']
       },
       {
         name: 'Favoritas',

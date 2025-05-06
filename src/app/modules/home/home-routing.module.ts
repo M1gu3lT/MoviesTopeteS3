@@ -5,7 +5,7 @@ const routes: Routes = [
   {
     path:'movies',
     loadChildren:()=>import('@modules/movies/movies.module').then(m => m.MoviesModule)
-  },
+  }, 
   {
     path:'favorite',
     loadChildren:()=>import('@modules/favorite/favorite.module').then(m => m.FavoriteModule)

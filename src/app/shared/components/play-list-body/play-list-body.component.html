@@ -1,12 +1,12 @@
 <div class="play-list-body">
     <ul class="play-list-table-header">
-      <li>Titulo ❤</li>
-      <li>Director 🆗</li>
+      <li (click)="changeSort('title')">Titulo ❤</li>
+      <li (click)="changeSort('director')">Director 🆗</li>
       <li>fecha incorporación 🍌😁</li>
       <li><i class="uil uil-clock-eight"></i></li>
     </ul>
   
-    <ul class="play-list-rows" *ngFor="let item of movies">
+    <ul class="play-list-rows" *ngFor="let item of movies | orderList:optionSort.property:optionSort.order">
       <li class="movie-name">
         <ng-container *ngTemplateOutlet="coverSection; context: { movie: item }"></ng-container>
       </li>
@@ -25,7 +25,7 @@
   <!-- template del cover -->
   <ng-template #coverSection let-movie="movie">
     <div class="cover-section">
-      <img appImgBroken class="cover-movie" [src]="movie.poster" [alt]="movie.title" />
+      <img appImgBroken [customImg]="'https://ionic.io/blog/wp-content/uploads/2024/02/angular-feature-image-1-1536x768.png'" class="cover-movie" [src]="movie.poster" [alt]="movie.title" />
       <div class="cover-info">
         <div class="name-movie">{{ movie.title }}</div>
         <div class="name-movie-details">{{ movie.cast.leadActor }}</div>

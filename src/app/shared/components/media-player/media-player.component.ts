@@ -1,10 +1,13 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { MoviesModel } from '@core/models/movies.model';
+import { ImgBrokenDirective } from '@shared/directives/img-broken.directive';
+import { MultimediaService } from '@shared/services/multimedia.service';
+import { response } from 'express';
 
 @Component({
   selector: 'app-media-player',
-  imports: [CommonModule],
+  imports: [CommonModule,ImgBrokenDirective],
   templateUrl: './media-player.component.html',
   styleUrl: './media-player.component.scss'
 })
@@ -18,10 +21,16 @@ export class MediaPlayerComponent implements OnInit {
 
   }
 
-  constructor(){}
+  constructor(private multimediaService: MultimediaService){}
 
   ngOnInit(): void {
-    
+     console.log('🟠 MediaPlayerComponent iniciado'); // DEBUG
+    const observer1$ = this.multimediaService.callback.subscribe(
+      (response: MoviesModel)=>{
+        console.log('recibiendo pelicula...', response);
+        
+      }
+    )
   }
 
 }

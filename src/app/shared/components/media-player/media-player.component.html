@@ -20,10 +20,10 @@
 
 <ng-template #movieZone>
     <div class="artist-inside" *ngIf="true">
-        <img [src]="mockCover.poster"
+        <img appImgBroken [src]="mockCover.poster"
             alt="" class="cover">
         <div class="track-info">
-            <h3 class="track-title">{{mockCover?.director}}</h3>
+            <h3 class="track-title">{{mockCover.director}}</h3>
             <h5 class="track-title sub-title">{{mockCover.title}}</h5>
         </div>
         <div class="track-like">
