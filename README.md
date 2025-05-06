@@ -18,7 +18,11 @@ MIGUEL TOPETE TORRES
 
 ## 🖼️ Captura de Pantalla
 
-***aqui voy a poner las capturas de la app  voy
+![auth](./capturas%20del%20proyecto%20y%20test/auth.png)
+![movies](./capturas%20del%20proyecto%20y%20test/movies.png)
+![favoritas](./capturas%20del%20proyecto%20y%20test/favoritas.png)
+
+
 
 ## ⚙️ Instrucciones de Instalación
 Sigue estos pasos para configurar y ejecutar el proyecto localmente:
@@ -53,7 +57,13 @@ Pruebas unitarias: Se realizaron pruebas básicas con Jasmine y Karma para asegu
 
 ## ✅ Reporte de Coverage y Testing
 
-****las capturas de los testing
+![coverage](./capturas%20del%20proyecto%20y%20test/coverage.png)
+![coverage2](./capturas%20del%20proyecto%20y%20test/coverage2.png)
+![ss1_testing](./capturas%20del%20proyecto%20y%20test/ss1_testing.png)
+![ss2_testing](./capturas%20del%20proyecto%20y%20test/ss2_testing.png)
+![ss3_testing-1error](./capturas%20del%20proyecto%20y%20test/ss3_testing-1error.png)
+![ss4_testin-solucionImagenBroke](./capturas%20del%20proyecto%20y%20test/ss4_testin-solucionImagenBroke.png)
+
 
 ## 🐞 Problemas Conocidos
 -El diseño no está completamente optimizado para pantallas de tamaños muy pequeños.
