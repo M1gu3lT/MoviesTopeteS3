@@ -1,49 +1,59 @@
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-
-<!-- Diseño del mode (small)-->
+<!-- Diseño del modo pequeño -->
 <div *ngIf="mode === 'small'  && !movie.hidden" class="card-player player-small">
-    <img appImgBroken [src]="movie.poster" [alt]="movie.title" class="cover" />
-    <div class="content-player">
-      {{ movie.title }}
-    </div>
-    <div class="buttons-player">
-      <!-- Boton play -->
-      <button (click)="sendPlay(movie)" *ngIf="true" class="play-btn">
-        <i class="uil" [ngClass]="{ 'uil-play': true }"></i>
-      </button>
+  <!-- Imagen de portada de la película -->
+  <img appImgBroken [src]="movie.poster" [alt]="movie.title" class="cover" />
   
-      <!-- Botón favorito -->
-      <button class="fav-btn" (click)="toggleFavorite(movie)">
-        <i class="uil" [ngClass]="{ 'uil-heart': !movie.favorited, 'uil-heart-alt': movie.favorited }"></i>
-      </button>
-  
-      <!-- Botón ocultar -->
-      <button class="hide-btn" (click)="hideMovie(movie)">
-        <i class="uil uil-eye-slash"></i>
-      </button>
-    </div>
+  <!-- Título de la película -->
+  <div class="content-player">
+    {{ movie.title }}
   </div>
+  
+  <!-- Contenedor de los botones de control -->
+  <div class="buttons-player">
+    <!-- Botón para reproducir la película -->
+    <button (click)="sendPlay(movie)" *ngIf="true" class="play-btn">
+      <i class="uil" [ngClass]="{ 'uil-play': true }"></i>
+    </button>
 
-<!-- Diseño del mode (big) -->
+    <!-- Botón para marcar como favorito -->
+    <button class="fav-btn" (click)="toggleFavorite(movie)">
+      <i class="uil" [ngClass]="{ 'uil-heart': !movie.favorited, 'uil-heart-alt': movie.favorited }"></i>
+    </button>
+
+    <!-- Botón para ocultar la película -->
+    <button class="hide-btn" (click)="hideMovie(movie)">
+      <i class="uil uil-eye-slash"></i>
+    </button>
+  </div>
+</div>
+
+<!-- Diseño del modo grande -->
 <div *ngIf="mode === 'big' && !movie.hidden" class="card-player player-big" [ngClass]="{ 'hidden': movie.hidden }">
-
-    <img appImgBroken [src]="movie.poster" [alt]="movie.title" class="cover" />
-    <div class="content-player">
-      {{ movie.title }}
-    </div>
-    <div class="buttons-player">
-      <button (click)="sendPlay(movie)" *ngIf="true" class="play-btn">
-        <i class="uil" [ngClass]="{ 'uil-play': true }"></i>
-      </button>
+  <!-- Imagen de portada de la película -->
+  <img appImgBroken [src]="movie.poster" [alt]="movie.title" class="cover" />
   
-      <!-- Botón favorito -->
-      <button class="fav-btn" (click)="toggleFavorite(movie)">
-        <i class="uil" [ngClass]="{ 'uil-heart': !movie.favorited, 'uil-heart-alt': movie.favorited }"></i>
-      </button>
-  
-      <!-- Botón ocultar -->
-      <button class="hide-btn" (click)="hideMovie(movie)">
-        <i class="uil uil-eye-slash"></i>
-      </button>
-    </div>
+  <!-- Título de la película -->
+  <div class="content-player">
+    {{ movie.title }}
   </div>
+  
+  <!-- Contenedor de los botones de control -->
+  <div class="buttons-player">
+    <!-- Botón para reproducir la película -->
+    <button (click)="sendPlay(movie)" *ngIf="true" class="play-btn">
+      <i class="uil" [ngClass]="{ 'uil-play': true }"></i>
+    </button>
+
+    <!-- Botón para marcar como favorito -->
+    <button class="fav-btn" (click)="toggleFavorite(movie)">
+      <i class="uil" [ngClass]="{ 'uil-heart': !movie.favorited, 'uil-heart-alt': movie.favorited }"></i>
+    </button>
+
+    <!-- Botón para ocultar la película -->
+    <button class="hide-btn" (click)="hideMovie(movie)">
+      <i class="uil uil-eye-slash"></i>
+    </button>
+  </div>
+</div>

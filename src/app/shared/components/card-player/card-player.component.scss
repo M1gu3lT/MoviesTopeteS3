@@ -1,16 +1,19 @@
 /* Contenedor de las cards */
 .cards-container {
     display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
+    flex-wrap: wrap; /* Permite que las tarjetas se acomoden en varias filas */
+    gap: 1rem; /* Espaciado entre las tarjetas */
     justify-content: flex-start;
     padding: 1rem;
-}
-
-/* Card estilo "streaming app" */
-.card-player {
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  /* Estilo base de las tarjetas */
+  .card-player {
     background-color: var(--color-2);
-    width: 180px;
+    width: 100%; /* Cambiar el ancho a 100% para hacerlo flexible */
+    max-width: 180px; /* Definir un max-width para evitar que crezca demasiado */
     height: auto;
     border-radius: var(--border-radius-1);
     display: flex;
@@ -18,45 +21,46 @@
     overflow: hidden;
     cursor: pointer;
     transition: transform 0.2s ease, background-color 0.3s ease;
-}
-
-.card-player:hover {
-    background-color: #4d4d4d;
-    transform: scale(1.03);
-}
-
-/* Imagen de portada */
-.card-player .cover {
+  }
+  
+  .card-player:hover {
+    background-color: #4d4d4d; /* Color de fondo cuando se pasa el cursor */
+    transform: scale(1.03); /* Efecto de zoom al pasar el cursor */
+  }
+  
+  /* Imagen de la película */
+  .card-player .cover {
     width: 100%;
     height: 270px;
-    object-fit: cover;
+    object-fit: cover; /* Asegura que la imagen cubra completamente el área */
     border-top-left-radius: var(--border-radius-1);
     border-top-right-radius: var(--border-radius-1);
-}
-
-/* Contenido de texto */
-.card-player .content-player {
+  }
+  
+  /* Estilo para el contenido de la tarjeta */
+  .card-player .content-player {
     padding: 0.75rem;
     font-weight: 600;
     color: var(--color-4);
     text-align: center;
-}
-
-/* Contenedor de botones */
-.card-player .buttons-player {
+  }
+  
+  /* Estilo para el contenedor de los botones */
+  .card-player .buttons-player {
     display: flex;
     justify-content: space-around;
     padding: 0.5rem;
     opacity: 0;
     transition: opacity 0.3s ease;
-}
-
-.card-player:hover .buttons-player {
+  }
+  
+  /* Mostrar los botones solo cuando se pasa el cursor */
+  .card-player:hover .buttons-player {
     opacity: 1;
-}
-
-/* Botones individuales */
-.card-player .buttons-player button {
+  }
+  
+  /* Estilo para los botones individuales */
+  .card-player .buttons-player button {
     color: var(--color-4);
     background-color: var(--color-1);
     border: none;
@@ -67,16 +71,60 @@
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-.fav-btn i.uil-heart-alt {
-    color: yellow; /* Cambiar color del corazón a amarillo cuando es favorito */
+  }
+  
+  /* Estilo para el botón favorito (corazón) */
+  .fav-btn i.uil-heart-alt {
+    color: yellow; /* Color amarillo cuando es favorito */
   }
   
   .fav-btn i.uil-heart {
-    color: gray; /* Color predeterminado cuando no es favorito */
+    color: gray; /* Color gris cuando no es favorito */
   }
-  /* Estilo cuando la card es marcada como favorita */
-.fav-card {
-    background-color: yellow;  /* Cambia a color amarillo cuando es favorita */
+  
+  /* Cambiar el color de fondo de la tarjeta cuando es favorita */
+  .fav-card {
+    background-color: yellow;
   }
+  
+  /* Responsive: Ajuste en el tamaño de las tarjetas para pantallas pequeñas */
+  @media (max-width: 768px) {
+    .card-player {
+      width: 100%; /* Las tarjetas ocupan todo el ancho disponible */
+      max-width: 100%; /* Evitar que el ancho máximo sea de 180px */
+    }
+  
+    .cards-container {
+      justify-content: center; /* Centrar las tarjetas */
+      padding: 0.5rem; /* Reducir el padding */
+    }
+  
+    .cover {
+      height: 200px; /* Reducir la altura de las imágenes en pantallas pequeñas */
+    }
+  
+    .buttons-player button {
+      width: 35px;
+      height: 35px;
+      font-size: 1rem;
+    }
+  }
+  
+  /* Responsive: Ajuste en el tamaño de las tarjetas para pantallas más pequeñas */
+  @media (max-width: 480px) {
+    .card-player {
+      width: 100%; /* Las tarjetas ocupan todo el ancho disponible */
+      max-width: 100%; /* Evitar que el ancho máximo sea de 180px */
+    }
+  
+    .cover {
+      height: 180px; /* Reducir aún más la altura de las imágenes */
+    }
+  
+    .buttons-player button {
+      width: 30px;
+      height: 30px;
+      font-size: 0.9rem;
+    }
+  }
+  
