@@ -1,31 +1,42 @@
+<!-- Contenedor principal del reproductor -->
 <div class="media-player">
-    <div class="media-player--wrapper ">
-        <!--Zona de pelicula-->
+    <div class="media-player--wrapper">
+        
+        <!-- Zona de la película: Muestra la portada, título y director -->
         <div class="artist player-center">
+            <!-- Aquí se inserta la plantilla para mostrar la película -->
             <ng-container *ngTemplateOutlet="movieZone"></ng-container>
         </div>
-        <!--Zona del reproductor-->
+
+        <!-- Zona de controles del reproductor: Controles de reproducción (reproducir, avanzar, retroceder) -->
         <div class="player-controls player-center">
+            <!-- Aquí se inserta la plantilla para los controles del reproductor -->
             <ng-container *ngTemplateOutlet="playerZone"></ng-container>
         </div>
-        <!--Zona del controles adicionales-->
+
+        <!-- Zona de controles adicionales (volumen, listas de reproducción, etc.) -->
         <div class="player-audio player-center">
+            <!-- Aquí se inserta la plantilla para los controles de audio -->
             <ng-container *ngTemplateOutlet="playerAudio"></ng-container>
         </div>
     </div>
 </div>
 
+<!-- ZONAS DE TEMPLATES -->
 
-<!-- ZONE TEMPLATES -->
-
+<!-- Zona de la película: Contiene la portada, título y director -->
 <ng-template #movieZone>
     <div class="artist-inside" *ngIf="true">
-        <img appImgBroken [src]="mockCover.poster"
-            alt="" class="cover">
+        <!-- Imagen de la película (portada) -->
+        <img appImgBroken [src]="mockCover.poster" alt="" class="cover">
+        
+        <!-- Información del título y director de la película -->
         <div class="track-info">
             <h3 class="track-title">{{mockCover.director}}</h3>
             <h5 class="track-title sub-title">{{mockCover.title}}</h5>
         </div>
+
+        <!-- Botón para marcar la película como favorita -->
         <div class="track-like">
             <button class="btn-like">
                 <i class="uil uil-heart"></i>
@@ -34,40 +45,57 @@
     </div>
 </ng-template>
 
+<!-- Zona de los controles del reproductor: Botones para retroceder, reproducir/pausar, y avanzar -->
 <ng-template #playerZone>
     <div class="player-controls-inside">
         <div class="buttons-media">
+            <!-- Botón para retroceder -->
             <button class="arrow btn">
                 <i class="uil uil-previous"></i>
             </button>
-            <button class="play btn">
-                <i  class="uil "></i>
 
+            <!-- Botón para reproducción/pausa (actualmente sin ícono) -->
+            <button class="play btn">
+                <i class="uil"></i>
             </button>
+
+            <!-- Botón para avanzar -->
             <button class="arrow btn">
                 <i class="uil uil-step-forward"></i>
             </button>
         </div>
-        <div class="media-linetime">
 
+        <!-- Barra de progreso del tiempo de la película -->
+        <div class="media-linetime">
+            <!-- Muestra el tiempo transcurrido -->
             <div class="time">00</div>
+            
+            <!-- Barra de progreso que muestra el avance de la película -->
             <span #progressBar class="time-progress">
-                <span class="time-progress-live" [style.width]="10+'%'">
-                </span>
+                <!-- El ancho de la barra de progreso está vinculado al tiempo de reproducción -->
+                <span class="time-progress-live" [style.width]="10+'%'"></span>
             </span>
+            
+            <!-- Muestra el tiempo total restante -->
             <div class="time">{{99}}</div>
         </div>
     </div>
 </ng-template>
 
+<!-- Zona de los controles de audio: Botones de configuración de audio y lista de reproducción -->
 <ng-template #playerAudio>
     <div class="player-audio-inside">
+        <!-- Botón para acceder a la lista de reproducción -->
         <button class="btn-media">
             <i class="uil uil-list-ui-alt"></i>
         </button>
+
+        <!-- Botón para activar/desactivar el boombox (o similar) -->
         <button class="btn-media">
             <i class="uil uil-boombox"></i>
         </button>
+
+        <!-- Botón para controlar el volumen -->
         <button class="btn-media">
             <i class="uil uil-volume-off"></i>
         </button>

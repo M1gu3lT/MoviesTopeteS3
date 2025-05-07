@@ -1,6 +1,10 @@
-.reproductor{
-    padding-bottom: 10rem;
-    //background: #ebcb17;
-    background: linear-gradient(90deg, rgb(194, 23, 23) 44%, rgb(189, 18, 18));
-    min-height: 100vh;
+.reproductor {
+    padding-bottom: 10rem; // Añade un espacio en la parte inferior del contenedor para crear espacio adicional.
+    
+    // background: #ebcb17; // Esta línea está comentada, posiblemente se reemplazó por el fondo en gradiente.
+    
+    background: linear-gradient(90deg, rgb(194, 23, 23) 44%, rgb(189, 18, 18)); 
+    // Se aplica un fondo con un gradiente lineal que va de un rojo más claro (rgb(194, 23, 23)) a un rojo más oscuro (rgb(189, 18, 18)).
+    
+    min-height: 100vh; // El contenedor ocupa al menos el 100% de la altura de la ventana del navegador (pantalla completa).
 }

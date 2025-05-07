@@ -1,9 +1,13 @@
 <div class="section--generic">
+    <!-- Título de la sección que se llena con el valor de la variable 'title' -->
     <h1 class="section--generic__title">{{title}}</h1>
 
     <div class="section--generic__player--zone">
+        <!-- Lista de películas, con clases dinámicas según el valor de 'mode' -->
         <ul class="player--list" [ngClass]="{'card-small':mode === 'small','card-big':mode === 'big'}">
+            <!-- Iteración sobre los elementos 'dataMovies', creando un 'app-card-player' por cada película -->
             <li *ngFor="let movie of dataMovies">
+                <!-- Componente 'app-card-player' que recibe la película y el modo como propiedades -->
                 <app-card-player [movie]="movie" [mode]="mode"></app-card-player>
             </li>
         </ul>

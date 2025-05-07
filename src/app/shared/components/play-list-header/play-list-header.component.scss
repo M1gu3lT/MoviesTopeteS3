@@ -1,57 +1,65 @@
+/* Contenedor principal del encabezado de la lista de reproducción */
 .play-list-header {
-    display: flex;
-    height: 18rem;
-    width: 100%;
-    padding-top: 3rem;
-    padding-bottom: 1rem;
-    background-color: #ffffff14;
+    display: flex; /* Utiliza flexbox para organizar los elementos en fila */
+    height: 18rem; /* Altura del contenedor */
+    width: 100%; /* Ancho completo */
+    padding-top: 3rem; /* Espaciado superior */
+    padding-bottom: 1rem; /* Espaciado inferior */
+    background-color: #ffffff14; /* Color de fondo translúcido con opacidad */
 }
 
+/* Contenedor de texto dentro del encabezado */
 .content-text {
-    padding: 1.5rem 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
+    padding: 1.5rem 0; /* Espaciado superior e inferior */
+    display: flex; /* Utiliza flexbox para organización interna */
+    flex-direction: column; /* Organiza los elementos en columna */
+    justify-content: flex-end; /* Alinea el contenido al final del contenedor */
 }
 
+/* Contenedor de la portada o imagen de la lista */
 .cover {
-    position: relative;
-    width: 17rem;
-    padding: 1rem 2rem;
-    display: flex;
-    justify-content: center;
+    position: relative; /* Posicionamiento relativo para control de elementos hijos */
+    width: 17rem; /* Ancho fijo */
+    padding: 1rem 2rem; /* Espaciado interno */
+    display: flex; /* Utiliza flexbox para alinear los elementos */
+    justify-content: center; /* Centra el contenido horizontalmente */
 }
 
+/* Estilo de la portada de marcador de lugar */
 .cover .cover-mock {
-    height: 100%;
-    width: 18rem;
-    display: flex;
-    align-self: center;
-    justify-content: center;
-    align-items: center;
-    font-size: 5.5rem;
-    background-color: var(--color-2);
-    box-shadow: var(--shadow-1);
+    height: 100%; /* Toma toda la altura disponible */
+    width: 18rem; /* Ancho fijo */
+    display: flex; /* Utiliza flexbox para organizar el contenido */
+    align-self: center; /* Alinea el contenido en el centro del contenedor */
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center; /* Centra el contenido verticalmente */
+    font-size: 5.5rem; /* Tamaño grande del icono */
+    background-color: var(--color-2); /* Color de fondo (variante personalizada) */
+    box-shadow: var(--shadow-1); /* Sombra del contenedor de la portada */
 }
 
+/* Estilo de los textos dentro de content-text */
 .content-text .title,
 .content-text .sub-title {
-    margin: 0;
-    font-weight: 600;
+    margin: 0; /* Elimina el margen por defecto */
+    font-weight: 600; /* Peso de la fuente (negrita) */
 }
 
+/* Título principal de la lista */
 .content-text .title {
-    font-size: 6rem;
-    letter-spacing: -7px;
+    font-size: 6rem; /* Tamaño grande del título */
+    letter-spacing: -7px; /* Espaciado entre letras negativo para acercarlas */
 }
 
+/* Estilo de texto pequeño dentro de content-text */
 .content-text .small-text {
-    text-transform: uppercase;
-    font-weight: 500;
+    text-transform: uppercase; /* Transforma el texto a mayúsculas */
+    font-weight: 500; /* Peso de la fuente */
 }
 
+/* Estilo de la cantidad de pistas (películas) en la lista */
 .content-text .count-tracks {
-    font-weight: 300;
-    opacity: .7;
-    padding-left: .5rem;
+    font-weight: 300; /* Peso de la fuente más ligero */
+    opacity: 0.7; /* Opacidad del texto */
+    padding-left: 0.5rem; /* Espaciado a la izquierda */
 }

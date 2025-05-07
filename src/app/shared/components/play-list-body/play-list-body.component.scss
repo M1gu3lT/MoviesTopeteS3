@@ -1,75 +1,86 @@
+/* Cuerpo de la lista de reproducción */
 .play-list-body {
-    padding: 1rem 2rem;
-  }
-  
-  .play-list-table-header {
-    width: 100%;
-    list-style: none;
-    display: grid;
-    grid-template-columns: 3fr 2fr 2fr 1fr;
-    margin: 0;
-    padding: 0;
-    font-size: 1rem;
-    letter-spacing: 1px;
-    border-bottom: solid 1px var(--color-2);
-    padding-bottom: 0.5rem;
-  }
-  
-  .play-list-table-header li {
-    text-transform: uppercase;
-    color: var(--color-4);
-    opacity: 0.7;
-  }
-  
-  .play-list-rows {
-    width: 100%;
-    list-style: none;
-    display: grid;
-    grid-template-columns: 3fr 2fr 2fr 1fr;
-    margin: 0;
-    padding: 1rem 0 0 0;
-    font-size: 1.1rem;
-  }
-  
-  .play-list-rows .movie-name-opacity {
-    opacity: 0.8;
-    font-weight: 400;
-  }
-  
-  .cover-section {
-    display: flex;
-    align-items: center;
-  }
-  
-  .cover-section .cover-movie {
-    width: 50px;
-    height: 50px;
-    object-fit: cover;
-    border-radius: 6px;
-  }
-  
-  .cover-section .cover-info {
-    padding: 0 1rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-  
-  .cover-section .cover-info .name-movie {
-    font-weight: 600;
-    font-size: 1.15rem;
-  }
-  
-  .cover-section .cover-info .name-movie-details {
-    font-size: 0.95rem;
-    opacity: 0.7;
-  }
-  
-  .play-list-rows {
-    // ...
-    transition: background-color 0.3s ease;
-  
-    &:hover {
-      background-color: rgba(255, 255, 255, 0.05); // fondo más claro al hacer hover
-    }
-  }
+  padding: 1rem 2rem; /* Espaciado dentro del cuerpo de la lista */
+}
+
+/* Cabecera de la tabla de la lista de reproducción */
+.play-list-table-header {
+  width: 100%; /* Ancho completo */
+  list-style: none; /* Sin puntos de lista */
+  display: grid; /* Usamos grid para organizar las columnas */
+  grid-template-columns: 3fr 2fr 2fr 1fr; /* Definimos las proporciones de las columnas */
+  margin: 0; /* Sin márgenes */
+  padding: 0; /* Sin relleno */
+  font-size: 1rem; /* Tamaño de la fuente */
+  letter-spacing: 1px; /* Espaciado entre letras */
+  border-bottom: solid 1px var(--color-2); /* Borde inferior de la tabla */
+  padding-bottom: 0.5rem; /* Espaciado inferior */
+}
+
+/* Estilo de los elementos de la cabecera de la tabla */
+.play-list-table-header li {
+  text-transform: uppercase; /* Convierte el texto a mayúsculas */
+  color: var(--color-4); /* Color de texto definido en las variables CSS */
+  opacity: 0.7; /* Opacidad para el efecto visual */
+}
+
+/* Estilo de las filas de la lista de reproducción */
+.play-list-rows {
+  width: 100%; /* Ancho completo */
+  list-style: none; /* Sin puntos de lista */
+  display: grid; /* Usamos grid para organizar las filas */
+  grid-template-columns: 3fr 2fr 2fr 1fr; /* Proporciones de las columnas */
+  margin: 0; /* Sin márgenes */
+  padding: 1rem 0 0 0; /* Relleno superior para las filas */
+  font-size: 1.1rem; /* Tamaño de la fuente */
+}
+
+/* Estilo de los elementos de las filas con opacidad */
+.play-list-rows .movie-name-opacity {
+  opacity: 0.8; /* Opacidad ajustada */
+  font-weight: 400; /* Peso de fuente normal */
+}
+
+/* Estilo de la sección de portada de la película */
+.cover-section {
+  display: flex; /* Usamos flexbox para alinear los elementos */
+  align-items: center; /* Alineamos los elementos verticalmente */
+}
+
+/* Estilo de la imagen de la portada de la película */
+.cover-section .cover-movie {
+  width: 50px; /* Ancho de la imagen */
+  height: 50px; /* Alto de la imagen */
+  object-fit: cover; /* Para que la imagen se ajuste correctamente al contenedor */
+  border-radius: 6px; /* Bordes redondeados en la imagen */
+}
+
+/* Estilo de la información sobre la película (título y detalles) */
+.cover-section .cover-info {
+  padding: 0 1rem; /* Relleno a los lados */
+  display: flex; /* Usamos flexbox */
+  flex-direction: column; /* Organizamos los elementos en columna */
+  justify-content: center; /* Centra los elementos verticalmente */
+}
+
+/* Estilo del título de la película */
+.cover-section .cover-info .name-movie {
+  font-weight: 600; /* Peso de la fuente más fuerte para el título */
+  font-size: 1.15rem; /* Tamaño de la fuente del título */
+}
+
+/* Estilo de los detalles de la película (actor, etc.) */
+.cover-section .cover-info .name-movie-details {
+  font-size: 0.95rem; /* Tamaño de la fuente para los detalles */
+  opacity: 0.7; /* Opacidad para un efecto sutil */
+}
+
+/* Estilo para las filas de la lista de reproducción con transición en el fondo */
+.play-list-rows {
+  transition: background-color 0.3s ease; /* Añadimos una transición para el cambio de color de fondo */
+}
+
+/* Efecto hover sobre las filas de la lista de reproducción */
+.play-list-rows:hover {
+  background-color: rgba(255, 255, 255, 0.05); /* Fondo más claro al pasar el mouse por encima */
+}

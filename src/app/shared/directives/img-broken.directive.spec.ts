@@ -1,11 +1,15 @@
-import { ElementRef } from '@angular/core';
 import { ImgBrokenDirective } from './img-broken.directive';
 
+
+//pruena ImgBroken
 describe('ImgBrokenDirective', () => {
-  it('debería crearse la directiva', () => {
-    // Simula un elemento HTML, por ejemplo un <img>
-    const mockElement = new ElementRef(document.createElement('img'));
-    const directive = new ImgBrokenDirective(mockElement);
+
+  
+  it('should create an instance', () => {
+    const directive = new ImgBrokenDirective();
     expect(directive).toBeTruthy();
   });
+
+  
+
 });

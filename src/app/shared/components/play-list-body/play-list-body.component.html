@@ -1,35 +1,47 @@
+<!-- Cuerpo de la lista de reproducción -->
 <div class="play-list-body">
-    <ul class="play-list-table-header">
-      <li (click)="changeSort('title')">Titulo ❤</li>
-      <li (click)="changeSort('director')">Director 🆗</li>
-      <li>fecha incorporación 🍌😁</li>
-      <li><i class="uil uil-clock-eight"></i></li>
-    </ul>
   
-    <ul class="play-list-rows" *ngFor="let item of movies | orderList:optionSort.property:optionSort.order">
-      <li class="movie-name">
-        <ng-container *ngTemplateOutlet="coverSection; context: { movie: item }"></ng-container>
-      </li>
-      <li class="movie-name-opacity">
-        {{ item.director }}
-      </li>
-      <li class="movie-name-opacity">
-        {{ item.director }}
-      </li>
-      <li class="movie-name-opacity">
-        {{ item.director }}
-      </li>
-    </ul>
-  </div>
+  <!-- Cabecera de la tabla de la lista de reproducción -->
+  <ul class="play-list-table-header">
+    <!-- Cada 'li' es un encabezado de columna, y el (click) está asociado a la función 'changeSort' para cambiar el orden de la lista -->
+    <li (click)="changeSort('title')">Titulo ❤</li> <!-- Ordena por título -->
+    <li (click)="changeSort('director')">Director 🆗</li> <!-- Ordena por director -->
+    <li>fecha incorporación 🍌😁</li> <!-- Columna estática de fecha de incorporación -->
+    <li><i class="uil uil-clock-eight"></i></li> <!-- Icono para la duración o tiempo de la película -->
+  </ul>
   
-  <!-- template del cover -->
-  <ng-template #coverSection let-movie="movie">
-    <div class="cover-section">
-      <img appImgBroken [customImg]="'https://ionic.io/blog/wp-content/uploads/2024/02/angular-feature-image-1-1536x768.png'" class="cover-movie" [src]="movie.poster" [alt]="movie.title" />
-      <div class="cover-info">
-        <div class="name-movie">{{ movie.title }}</div>
-        <div class="name-movie-details">{{ movie.cast.leadActor }}</div>
-      </div>
+  <!-- Fila de la lista de reproducción que se repite para cada película en 'movies' -->
+  <ul class="play-list-rows" *ngFor="let item of movies | orderList:optionSort.property:optionSort.order">
+    <!-- Cada película se muestra en una fila -->
+    <li class="movie-name">
+      <!-- Se utiliza un 'ng-template' para mostrar el contenido de la película, pasando la película como contexto -->
+      <ng-container *ngTemplateOutlet="coverSection; context: { movie: item }"></ng-container>
+    </li>
+    <!-- Datos adicionales de la película -->
+    <li class="movie-name-opacity">
+      {{ item.director }} <!-- Director de la película -->
+    </li>
+    <li class="movie-name-opacity">
+      {{ item.director }} <!-- Información repetida (posiblemente otra propiedad de la película) -->
+    </li>
+    <li class="movie-name-opacity">
+      {{ item.director }} <!-- Información repetida (posiblemente otra propiedad de la película) -->
+    </li>
+  </ul>
+</div>
+
+<!-- Template del cover de la película -->
+<ng-template #coverSection let-movie="movie">
+  <!-- Sección de la portada de la película -->
+  <div class="cover-section">
+    <!-- Imagen de la portada de la película con una directiva personalizada 'appImgBroken' -->
+    <img appImgBroken [customImg]="'https://ionic.io/blog/wp-content/uploads/2024/02/angular-feature-image-1-1536x768.png'" 
+      class="cover-movie" [src]="movie.poster" [alt]="movie.title" />
+    
+    <!-- Información sobre la película -->
+    <div class="cover-info">
+      <div class="name-movie">{{ movie.title }}</div> <!-- Título de la película -->
+      <div class="name-movie-details">{{ movie.cast.leadActor }}</div> <!-- Actor principal de la película -->
     </div>
-  </ng-template>
-  
+  </div>
+</ng-template>

@@ -1,60 +1,68 @@
+// Estilo general de la página de login
 .login-auth-page {
-    position: absolute;
+    position: absolute; // Ocupa toda la pantalla
     width: 100vw;
     height: 100vh;
-    background-color: var(--color-4);
-    color: var(--color-3);
+    background-color: var(--color-4); // Color de fondo principal
+    color: var(--color-3); // Color del texto por defecto
     display: flex;
-    justify-content: center;
+    justify-content: center; // Centrado vertical
     flex-direction: column;
-    align-items: center;
+    align-items: center; // Centrado horizontal
     align-content: center;
 }
 
+// Contenedor del contenido centrado de login
 .login-auth-page .login-auth-wrapper {
-    width: 25%;
+    width: 25%; // Login compacto y centrado
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
 }
 
+// Zona de los botones sociales
 .login-auth-page .login-social-zone {
     display: flex;
     flex-direction: column;
-    gap: .75rem;
+    gap: .75rem; // Espacio entre botones
     width: 100%;
 }
 
+// Estilo base para todos los botones sociales
 .login-auth-page .social-btn {
     border: 0;
     padding: .5rem 2rem;
-    width: 100%;
+    width: 100%; // Que ocupen todo el ancho disponible
     font-size: var(--font-size-2);
     border-radius: var(--border-radius-2);
     box-shadow: var(--shadow-1);
-    border: solid 1px var(--color-4);
+    border: solid 1px var(--color-4); // Borde igual al fondo por defecto
     background-color: var(--color-4);
     font-weight: 600;
 }
 
+// Estilo específico para el botón de Facebook
 .login-auth-page .login-social-zone .social-btn.btn-fb {
     background-color: #3A61B3;
-    color: var(--color-4);
+    color: var(--color-4); // Texto claro
 }
 
+// Estilo específico para el botón de Apple
 .login-auth-page .login-social-zone .social-btn.btn-apple {
     background-color: #1a1a1a;
     color: var(--color-4);
 }
 
+// Separador visual entre social y formulario
 .login-auth-page .separator {
     width: 100%;
     margin: 2rem 0;
     border-bottom: solid 1px var(--color-2);
-    opacity: .2;
+    opacity: .2; // Muy sutil
 }
 
+// Formulario de login
 .login-auth-page .login-auth-form {
     display: flex;
     width: 100%;
@@ -62,12 +70,14 @@
     flex-direction: column;
 }
 
+// Grupo de campos (input + label)
 .login-auth-page .login-auth-form .form-group {
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
 }
 
+// Estilo de los campos de entrada
 .login-auth-page .login-auth-form .form-group input {
     border: solid 1px #e7e7e7;
     border-radius: var(--border-radius-1);
@@ -76,6 +86,7 @@
     font-size: 90%;
 }
 
+// Etiquetas de los campos
 .login-auth-page .login-auth-form label {
     padding-bottom: .35rem;
     font-weight: 600;
@@ -83,10 +94,12 @@
     margin: 0;
 }
 
+// Zona del enlace para recuperar contraseña
 .login-auth-page .login-auth-form .form-steps {
     padding: .5rem 0;
 }
 
+// Estilo del enlace
 .login-auth-page .login-auth-form .form-steps .link {
     color: var(--color-2);
     font-size: 85%;
@@ -94,16 +107,19 @@
     text-decoration: underline;
 }
 
+// Hover en el enlace
 .login-auth-page .login-auth-form .form-steps .link:hover {
-    color: var(--color-1);
+    color: var(--color-1); // Cambio de color al pasar el mouse
 }
 
+// Botón de iniciar sesión (form-action)
 .login-auth-page .login-auth-form .form-action .login {
     color: var(--color-4);
     margin: 1rem 0;
     background-color: var(--color-1);
 }
 
+// Estilo especial para inputs inválidos (cuando se tocan y están mal)
 input.ng-invalid.ng-touched {
-    border: solid 2px red !important
+    border: solid 2px red !important; // Marca clara para mostrar error
 }

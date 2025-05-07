@@ -1,19 +1,23 @@
 .section--generic {
+    /* Establece un margen inferior de 2rem para la sección */
     margin-bottom: 2rem;
 }
 
 .section--generic__player--zone .player--list {
+    /* Define un contenedor de lista como una cuadrícula */
     display: grid;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    gap: 1.15rem;
+    list-style: none; /* Elimina los puntos de la lista */
+    margin: 0; /* Elimina el margen */
+    padding: 0; /* Elimina el padding */
+    gap: 1.15rem; /* Espacio entre los elementos de la cuadrícula */
 }
 
 .section--generic__player--zone .player--list.card-small {
-    grid-template-columns: repeat(5, 1fr);
+    /* Define el número de columnas para el modo 'small' */
+    grid-template-columns: repeat(5, 1fr); /* 5 columnas de igual tamaño */
 }
 
 .section--generic__player--zone .player--list.card-big {
-    grid-template-columns: repeat(6, minmax(100px, 1fr));
+    /* Define el número de columnas para el modo 'big' */
+    grid-template-columns: repeat(6, minmax(100px, 1fr)); /* 6 columnas con un ancho mínimo de 100px */
 }

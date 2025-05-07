@@ -1,21 +1,31 @@
+/* Estilos generales del pie de página */
 .footer {
-    width: 100%;
-    height: 60px;
+    /* El ancho del pie de página es del 100% del contenedor */
+    width: 100%; 
+  
+    /* La altura del pie de página es de 60px */
+    height: 60px; 
+  
+    /* El pie de página tiene una posición fija, lo que hace que se quede visible en la parte inferior de la página */
     position: fixed;
-    bottom: 0;
-    left: 0;
+    bottom: 0; /* Lo posiciona en la parte inferior de la ventana */
+    left: 0; /* Lo alinea al borde izquierdo de la ventana */
+    
+    /* Agregamos un poco de padding (espaciado interior) */
     padding: 0.5rem 1rem;
+  
+    /* Usamos Flexbox para alinear los elementos dentro del pie de página */
     display: flex;
+    
+    /* Los elementos dentro del pie de página se alinean verticalmente en el centro */
     align-items: center;
+  
+    /* Distribuimos el espacio entre los elementos de manera equitativa */
     justify-content: space-between;
+  
+    /* Definimos el color de fondo del pie de página */
     background-color: var(--background-color, #ebcb17); 
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
-}
-
-.footer-bar__list{
-    font-size:20px;
-    margin-right: 20px;
-}
-
-
+  
+    /* Agregamos una sombra suave para darle un efecto de profundidad */
+    box-shadow:
+  

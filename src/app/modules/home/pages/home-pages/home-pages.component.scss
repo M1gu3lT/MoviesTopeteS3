@@ -1,6 +1,6 @@
-.home-wrapper{
-    margin: 5rem 0 0 0;
-    background: #ebcb17;
-    background: linear-gradient(90deg, rgb(39, 39, 39, 1) 44%, rgb(24, 23, 23, 1));
-    min-height: 100vh;
+.home-wrapper {
+    margin: 5rem 0 0 0;  // Espaciado superior de 5rem, sin márgenes a la derecha, inferior o izquierda
+    background: #ebcb17;  // Color de fondo amarillo (usado como fallback)
+    background: linear-gradient(90deg, rgb(39, 39, 39, 1) 44%, rgb(24, 23, 23, 1));  // Fondo con un gradiente lineal de gris oscuro a negro
+    min-height: 100vh;  // Altura mínima de la sección será el 100% de la altura de la ventana
 }

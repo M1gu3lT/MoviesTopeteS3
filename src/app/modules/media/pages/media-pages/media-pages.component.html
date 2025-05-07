@@ -1,9 +1,13 @@
-<div class="movie-page" >
-    <!-- seccion top -->
+<div class="movie-page">
+    <!-- Sección superior donde se incluye un componente genérico para mostrar el título de la sección -->
     <app-section-generic [title]="'seccion media '"></app-section-generic>
+    
+    <!-- Descripción o texto para indicar que es la sección del reproductor -->
     <p>reproductor</p>
-    <div class="reproductor" >
+    
+    <!-- Contenedor donde se incluye el componente del reproductor de medios -->
+    <div class="reproductor">
+        <!-- Componente para mostrar el reproductor de medios -->
         <app-media-player></app-media-player>
     </div>
-    
 </div>

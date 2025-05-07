@@ -1,155 +1,178 @@
+/* Contenedor principal del reproductor */
 .media-player {
-    background-color: var(--color-5);
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    z-index: 2;
-    height: 85px;
-    border-top: solid 1px var(--color-2);
-    box-shadow: 0px -15px 15px 7px #0000002e;
-    padding-bottom: 5rem;
+    background-color: var(--color-5); /* Color de fondo */
+    position: fixed; /* Fijar el reproductor en la parte inferior de la pantalla */
+    bottom: 0; /* Alinearlo al fondo */
+    width: 100%; /* Que ocupe todo el ancho de la pantalla */
+    z-index: 2; /* Asegurarse de que esté por encima de otros elementos */
+    height: 85px; /* Altura del reproductor */
+    border-top: solid 1px var(--color-2); /* Borde superior */
+    box-shadow: 0px -15px 15px 7px #0000002e; /* Sombra en la parte superior */
+    padding-bottom: 5rem; /* Espaciado inferior */
 }
 
+/* Contenedor de los elementos dentro del reproductor */
 .media-player .media-player--wrapper {
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    height: 100%;
-    padding: 0;
+    position: relative; /* Para posicionar los elementos dentro */
+    display: flex; /* Usar flexbox para organizar los elementos */
+    justify-content: space-between; /* Distribuir el espacio entre los elementos */
+    height: 100%; /* Que ocupe todo el alto del contenedor */
+    padding: 0; /* Sin padding adicional */
 }
 
+/* Contenedor para la zona de la película */
 .media-player .media-player--wrapper .player-center {
-    display: flex;
-    align-content: center;
-    align-items: center;
+    display: flex; /* Usar flexbox para centrar los elementos */
+    align-content: center; /* Centrado vertical */
+    align-items: center; /* Centrado vertical */
 }
 
+/* Contenedor de la zona de la película (25% del ancho) */
 .media-player--wrapper .artist {
-    width: 25%;
-    padding: 0 .5rem;
+    width: 25%; /* Ancho del contenedor */
+    padding: 0 .5rem; /* Padding horizontal */
 }
 
+/* Contenedor de los controles de audio (25% del ancho) */
 .media-player--wrapper .player-audio {
-    width: 25%;
-    padding: 0 .5rem;
+    width: 25%; /* Ancho del contenedor */
+    padding: 0 .5rem; /* Padding horizontal */
 }
 
+/* Contenedor de los controles de reproducción (50% del ancho) */
 .media-player--wrapper .player-controls {
-    width: 50%;
-    padding: 0 .5rem;
-    position: relative;
+    width: 50%; /* Ancho del contenedor */
+    padding: 0 .5rem; /* Padding horizontal */
+    position: relative; /* Para posicionar los controles relativos a este contenedor */
 }
 
+/* Estilos para los elementos dentro de la zona de la película */
 .media-player--wrapper .artist .artist-inside {
-    display: flex;
-    gap: .5rem
+    display: flex; /* Usar flexbox */
+    gap: .5rem; /* Espaciado entre los elementos */
 }
 
+/* Contenedor para el botón de like en la zona de la película */
 .media-player--wrapper .artist .track-like {
-    display: flex;
-    flex-direction: column;
-    align-self: center;
-    padding: 0 .25rem;
+    display: flex; /* Usar flexbox */
+    flex-direction: column; /* Organizar los elementos en columna */
+    align-self: center; /* Centrado en el eje transversal */
+    padding: 0 .25rem; /* Padding horizontal */
 }
 
+/* Estilo del botón de like */
 .media-player--wrapper .artist .track-like .btn-like {
-    border: 0;
-    background-color: transparent;
-    color: var(--color-4);
-    font-size: var(--font-size-2);
-    opacity: .7;
+    border: 0; /* Sin borde */
+    background-color: transparent; /* Fondo transparente */
+    color: var(--color-4); /* Color del ícono */
+    font-size: var(--font-size-2); /* Tamaño de fuente */
+    opacity: .7; /* Opacidad */
 }
 
+/* Estilos de la información de la película dentro de la zona de la película */
 .media-player--wrapper .artist .artist-inside .track-info {
-    display: flex;
-    flex-direction: column;
-    align-self: center;
+    display: flex; /* Usar flexbox */
+    flex-direction: column; /* Organizar en columna */
+    align-self: center; /* Centrar verticalmente */
 }
 
+/* Título de la película */
 .media-player--wrapper .artist .artist-inside .track-title {
-    margin: 0;
-    font-weight: 400;
-    font-size: .8rem;
+    margin: 0; /* Sin margen */
+    font-weight: 400; /* Peso de la fuente */
+    font-size: .8rem; /* Tamaño de fuente */
 }
 
+/* Subtítulo de la película */
 .media-player--wrapper .artist .artist-inside .sub-title {
-    margin: 0;
-    font-weight: 300;
-    font-size: 80%;
-    opacity: .6;
+    margin: 0; /* Sin margen */
+    font-weight: 300; /* Peso de la fuente */
+    font-size: 80%; /* Tamaño de fuente más pequeño */
+    opacity: .6; /* Opacidad más baja */
 }
 
+/* Imagen de la portada de la película */
 .media-player--wrapper .artist .artist-inside .cover {
-    width: 55px;
-    height: 55px;
-    object-fit: cover;
+    width: 55px; /* Ancho de la imagen */
+    height: 55px; /* Alto de la imagen */
+    object-fit: cover; /* Ajustar la imagen para cubrir el espacio */
 }
 
+/* Contenedor de los controles dentro del reproductor */
 .media-player--wrapper .player-controls-inside {
-    display: flex;
-    justify-content: center;
-    align-self: center;
-    flex-direction: column;
-    width: 100%;
-    position: relative;
+    display: flex; /* Usar flexbox */
+    justify-content: center; /* Centrar los controles */
+    align-self: center; /* Centrar verticalmente */
+    flex-direction: column; /* Organizar los controles en columna */
+    width: 100%; /* Ancho completo */
+    position: relative; /* Para posicionar elementos dentro */
 }
 
+/* Contenedor de los botones de control (retroceder, reproducir, avanzar) */
 .media-player--wrapper .player-controls-inside .buttons-media {
-    display: flex;
-    justify-content: center;
-    align-self: center;
-    gap: .5rem
+    display: flex; /* Usar flexbox */
+    justify-content: center; /* Centrar los botones */
+    align-self: center; /* Centrar verticalmente */
+    gap: .5rem; /* Espaciado entre los botones */
 }
 
+/* Estilos de los botones dentro de los controles del reproductor */
 .media-player--wrapper .player-controls-inside .buttons-media .btn {
-    background-color: transparent;
-    border: 0;
-    color: var(--color-4);
-    opacity: .7;
-    font-size: 1.65rem
+    background-color: transparent; /* Fondo transparente */
+    border: 0; /* Sin borde */
+    color: var(--color-4); /* Color del ícono */
+    opacity: .7; /* Opacidad */
+    font-size: 1.65rem; /* Tamaño de fuente */
 }
 
+/* Estilo del botón de reproducción (más grande que los otros) */
 .media-player--wrapper .player-controls-inside .buttons-media .play {
-    font-size: 2.35rem;
+    font-size: 2.35rem; /* Tamaño más grande */
 }
 
+/* Barra de tiempo dentro del reproductor */
 .media-player--wrapper .player-controls-inside .media-linetime {
-    display: flex;
-    justify-content: space-between;
-    font-size: 70%;
-    padding: 0;
+    display: flex; /* Usar flexbox */
+    justify-content: space-between; /* Distribuir espacio entre los elementos */
+    font-size: 70%; /* Tamaño de fuente pequeño */
+    padding: 0; /* Sin padding adicional */
 }
 
+/* Estilo de las horas/minutos dentro de la barra de tiempo */
 .media-player--wrapper .player-controls-inside .media-linetime .time {
-    padding: .5rem 0;
+    padding: .5rem 0; /* Espaciado vertical */
 }
 
+/* Barra de progreso de la película */
 .media-player--wrapper .player-controls-inside .media-linetime .time-progress {
-    background-color: var(--color-2);
-    height: 2px;
-    width: 100%;
-    left: 0;
-    position: absolute;
-    cursor: pointer;
+    background-color: var(--color-2); /* Color de fondo de la barra de progreso */
+    height: 2px; /* Alto de la barra */
+    width: 100%; /* Ancho completo */
+    left: 0; /* Alineación a la izquierda */
+    position: absolute; /* Posicionamiento absoluto */
+    cursor: pointer; /* Cambiar el cursor cuando se pase por encima */
 }
 
+/* Barra de progreso en vivo (muestra el progreso de la película) */
 .media-player--wrapper .player-controls-inside .media-linetime .time-progress-live {
-    background-color: var(--color-4);
-    width: 0%;
-    height: 2px;
-    transition: all ease var(--animation-1);
-    position: absolute;
+    background-color: var(--color-4); /* Color de la barra de progreso */
+    width: 0%; /* Ancho inicial de la barra de progreso */
+    height: 2px; /* Alto de la barra */
+    transition: all ease var(--animation-1); /* Transición suave */
+    position: absolute; /* Posicionamiento absoluto */
 }
 
+/* Contenedor de los botones de audio (volumen, lista de reproducción, boombox) */
 .media-player--wrapper .player-audio-inside {
-    display: flex;
-    justify-content: flex-end;
-    width: 100%;
+    display: flex; /* Usar flexbox */
+    justify-content: flex-end; /* Alinearlo a la derecha */
+    width: 100%; /* Ancho completo */
 }
 
+/* Estilo de los botones de audio */
 .media-player--wrapper .player-audio-inside .btn-media {
-    background-color: transparent;
-    border: 0;
-    color: var(--color-4);
-    font-size: var(--font-size-2);
+    background-color: transparent; /* Fondo transparente */
+    border: 0; /* Sin borde */
+    color: var(--color-4); /* Color del ícono */
+    font-size: var(--font-size-2); /* Tamaño de fuente */
 }

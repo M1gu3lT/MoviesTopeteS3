@@ -1,33 +1,48 @@
+<!-- Contenedor principal de la barra de navegación -->
 <nav class="nav-bar">
-    <div class="nav-bar__menu-icon">
-      <h2>Movies Topete</h2>
-    </div>
   
-    <ul class="nav-bar__list list-one">
-      <li [routerLink]="item.router" [queryParams]="item.query" *ngFor="let item of mainMenu.defaultOptions">
-        <div class="list-wrapper-item">
-            <i [ngClass]="['uil',item.icon]"></i>
-          <span class="list-label">{{item.name}} </span>
-        </div>
-      </li>
-    </ul>
-  
-    
-    <ul class="nav-bar__list list-two">
-        <li *ngFor="let item of mainMenu.accessLink">
-        <div class="list-wrapper-item">
-            <i [ngClass]="['uil',item.icon]"></i>
-          <span class="list-label">{{item.name}}</span>
-        </div>
-      </li>
-    </ul>
-  
-    <ul class="nav-bar__list list-three">
-        <li *ngFor="let item of customOptions">
-        <div class="list-wrapper-item">
-          <span class="list-label">{{item.name}}</span>
-        </div>
-      </li>
-    </ul>
-  </nav>
-  
+  <!-- Sección del logo o nombre de la aplicación -->
+  <div class="nav-bar__menu-icon">
+    <h2>Movies Topete</h2> <!-- Título o logo de la aplicación -->
+  </div>
+
+  <!-- Sección del menú principal con opciones predeterminadas -->
+  <ul class="nav-bar__list list-one">
+    <!-- Iteramos sobre la lista de opciones del menú principal -->
+    <li [routerLink]="item.router" [queryParams]="item.query" *ngFor="let item of mainMenu.defaultOptions">
+      <!-- Cada elemento del menú tiene un ícono y nombre asociado -->
+      <div class="list-wrapper-item">
+        <!-- Icono de la opción del menú, con la clase 'uil' y el icono específico -->
+        <i [ngClass]="['uil',item.icon]"></i>
+        <!-- Nombre de la opción del menú -->
+        <span class="list-label">{{item.name}} </span>
+      </div>
+    </li>
+  </ul>
+
+  <!-- Sección de enlaces de acceso, como el perfil de usuario o ajustes -->
+  <ul class="nav-bar__list list-two">
+    <!-- Iteramos sobre los enlaces de acceso -->
+    <li *ngFor="let item of mainMenu.accessLink">
+      <!-- Cada elemento tiene un ícono y nombre asociado -->
+      <div class="list-wrapper-item">
+        <!-- Icono de la opción de acceso, con la clase 'uil' y el icono específico -->
+        <i [ngClass]="['uil',item.icon]"></i>
+        <!-- Nombre de la opción de acceso -->
+        <span class="list-label">{{item.name}}</span>
+      </div>
+    </li>
+  </ul>
+
+  <!-- Sección de opciones personalizadas -->
+  <ul class="nav-bar__list list-three">
+    <!-- Iteramos sobre las opciones personalizadas -->
+    <li *ngFor="let item of customOptions">
+      <!-- Cada opción personalizada solo tiene el nombre -->
+      <div class="list-wrapper-item">
+        <span class="list-label">{{item.name}}</span> <!-- Nombre de la opción personalizada -->
+      </div>
+    </li>
+  </ul>
+
+</nav>
