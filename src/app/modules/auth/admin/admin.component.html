@@ -1,0 +1,84 @@
+<!-- Muestro un texto indicando que esta sección es para gestionar usuarios de MT -->
+<p>Sección de gestión de usuarios MT</p>
+
+<!-- Contenedor principal con algo de espacio arriba y abajo -->
+<div class="container my-4">
+  <!-- Título centrado para la sección de gestión -->
+  <h2 class="text-center mb-4">MT User Management</h2>
+
+  <!-- Botón para abrir el modal y agregar un nuevo usuario -->
+  <div class="d-flex justify-content-end mb-3">
+    <button class="btn btn-primary" (click)="openModal()">Add User</button>
+  </div>
+
+  <!-- Tabla para mostrar la lista de usuarios -->
+  <table class="table table-bordered">
+    <thead class="table-dark">
+      <tr>
+        <th>ID</th>
+        <th>Username</th>
+        <!-- Decidí ocultar la contraseña por seguridad -->
+        <!-- <th>Password</th> -->
+        <th>Date</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+
+    <!-- Aquí recorro la lista de usuarios y muestro cada uno en una fila -->
+    <tbody id="mtUserTable">
+      @for(item of MTList; track $index){
+        <tr>
+          <td>{{ item.id }}</td>
+          <td>{{ item.username }}</td>
+          <!-- <td>{{ item.passwordHash }}</td> --> <!-- También oculto esto -->
+          <td>{{ item.createDate }}</td>
+          <td>
+            <!-- Botones para editar o eliminar el usuario -->
+            <button class="btn btn-sm btn-warning" (click)="editUser(item)">Edit</button>
+            <button class="btn btn-sm btn-danger" (click)="deleteUser(item)">Delete</button>
+          </td>
+        </tr>
+      }
+    </tbody>
+  </table>
+</div>
+
+<!-- Modal donde puedo registrar o editar un usuario -->
+<div class="modal" #userModal tabindex="-1" aria-labelledby="userModalLabel">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <!-- Encabezado del modal con botón para cerrarlo -->
+      <div class="modal-header">
+        <h5 class="modal-title" id="userModalLabel">Add/Edit MT User</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" (click)="closeModal()" aria-label="Close"></button>
+      </div>
+
+      <!-- Cuerpo del modal con el formulario de usuario -->
+      <div class="modal-body">
+        <div id="userForm">
+          <!-- Campo para el nombre de usuario -->
+          <div class="mb-3">
+            <label for="username" class="form-label">Username</label>
+            <input type="text" [(ngModel)]="MTObj.Username" class="form-control" id="username" required>
+          </div>
+
+          <!-- Campo para la contraseña (aunque se almacena como hash) -->
+          <div class="mb-3">
+            <label for="passwordHash" class="form-label">Password</label>
+            <input type="text" [(ngModel)]="MTObj.passwordHash" class="form-control" id="passwordHash" required>
+          </div>
+
+          <!-- Campo para la fecha de creación del usuario -->
+          <div class="mb-3">
+            <label for="createDate" class="form-label">Create Date</label>
+            <input type="datetime-local" [(ngModel)]="MTObj.createDate" class="form-control" id="createDate" required>
+          </div>
+
+          <!-- Dependiendo si el ID es negativo, decido si es nuevo usuario o actualización -->
+          @if(MTObj.id < 0){
+            <button type="button" (click)="onSave()" class="btn btn-primary">registrarse</button>
+          }@else {
+            <button type="button" (click)="onUpdate()" class="btn btn-warning">Actualizar</button>
+          }
+        </div>

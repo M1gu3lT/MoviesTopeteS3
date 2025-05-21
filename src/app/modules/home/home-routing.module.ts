@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';  // Importa el decorador NgModule de Angular
 import { RouterModule, Routes } from '@angular/router';  // Importa RouterModule y Routes para configurar las rutas de la aplicación
+import { EmployeeDataComponent } from '@modules/employee-data/employee-data.component';
 
 // Definición de las rutas específicas para el módulo Home
 const routes: Routes = [
@@ -22,6 +23,10 @@ const routes: Routes = [
   {
     path: 'peliculas',  // Ruta para acceder al módulo de Películas
     loadChildren: () => import('@modules/peliculas/peliculas.module').then(m => m.PeliculasModule)  // Carga el módulo Peliculas de forma perezosa
+  },
+  {
+    path: 'employee-data',  // Ruta para accedera employee (prueba de conexion DB)
+    component: EmployeeDataComponent  
   }
 ];
 
