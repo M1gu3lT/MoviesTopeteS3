@@ -30,8 +30,16 @@ MIGUEL TOPETE TORRES
 
 ## 🖼️ Captura de Pantalla
 
+![Sección Admin](capturas%20del%20proyecto%20y%20test/sprint4-capturas/seccionAdministrador.jpg)
 
+![Sección Admin 2](capturas%20del%20proyecto%20y%20test/sprint4-capturas/seccionAdministrador2.jpg)
 
+![Sección Admin 3](capturas%20del%20proyecto%20y%20test/sprint4-capturas/seccionAdministrador3.jpg)
+
+![Sección Admin 4](capturas%20del%20proyecto%20y%20test/sprint4-capturas/seccionAdministrador4.jpg)
+![Sección Login](capturas%20del%20proyecto%20y%20test/sprint4-capturas/seccionLogin.jpg)
+
+![Conexión API](capturas%20del%20proyecto%20y%20test/sprint4-capturas/NetworkConexionApi.jpg)
 
 
 ## ⚙️ Instrucciones de Instalación
