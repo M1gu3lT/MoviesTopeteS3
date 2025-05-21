@@ -1,4 +1,6 @@
 # 🎬 Movies Topete
+##comentario para el profe....
+profe la api que se utilizo es la de nombre MT.Api y en los archivos a nivel de src esta el archivo extraido del mysql, utilice la explicada inpartida por usted.
 
 ## Descripción
 
