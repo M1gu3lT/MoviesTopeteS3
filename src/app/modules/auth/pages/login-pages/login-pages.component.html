@@ -51,56 +51,49 @@
       </div>
 
       <!-- Modal para registrar un nuevo usuario -->
-<div class="modal" #userModal tabindex="-1" aria-labelledby="userModalLabel">
-  <div class="modal-dialog">
-    <div class="modal-content">
+      <div class="modal" #userModal tabindex="-1" aria-labelledby="userModalLabel">
+        <div class="modal-dialog">
+          <div class="modal-content">
 
-      <!-- Cabecera del modal con botón para cerrarlo -->
-      <div class="modal-header">
-        <h5 class="modal-title" id="userModalLabel">Ingresa tus datos para el registro</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" (click)="closeModal()" aria-label="Close"></button>
+            <!-- Cabecera del modal con botón para cerrarlo -->
+            <div class="modal-header">
+              <h5 class="modal-title" id="userModalLabel">Ingresa tus datos para el registro</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" (click)="closeModal()"
+                aria-label="Close"></button>
+            </div>
+
+            <!-- Cuerpo del modal con los campos del formulario -->
+            <div class="modal-body">
+              <div id="userForm">
+
+                <!-- Campo para el username -->
+                <div class="mb-3">
+                  <label for="username" class="form-label text-dark">Username</label>
+                  <input type="text" [(ngModel)]="MTObj.Username" class="form-control" id="username" required>
+                </div>
+
+                <!-- Campo para la contraseña -->
+                <div class="mb-3">
+                  <label for="passwordHash" class="form-label text-dark">Password</label>
+                  <input type="text" [(ngModel)]="MTObj.passwordHash" class="form-control" id="passwordHash" required>
+                </div>
+
+                <!-- Campo para la fecha de creación -->
+                <div class="mb-3">
+                  <label for="createDate" class="form-label text-dark">Date</label>
+                  <input type="datetime-local" [(ngModel)]="MTObj.createDate" class="form-control" id="createDate" required>
+                </div>
+
+                <!-- Botón para enviar los datos del nuevo usuario -->
+                <button type="button" (click)="onSave()" class="btn btn-warning">registrarse</button>
+              </div>
+            </div>
+
+            <!-- Aquí podrías agregar mensajes de error, pero por ahora están comentados -->
+
+          </div>
+        </div>
       </div>
-
-      <!-- Cuerpo del modal con los campos del formulario -->
-      <div class="modal-body">
-        <form [formGroup]="formRegister" (ngSubmit)="onSave()">
-
-          <!-- Campo para el username -->
-          <div class="mb-3">
-            <label for="username" class="form-label text-dark">Username</label>
-            <input type="text" formControlName="Username" class="form-control" id="username" required>
-            <div *ngIf="formRegister.get('Username')?.invalid && formRegister.get('Username')?.touched" class="text-danger">
-              El username es obligatorio y debe tener al menos 3 caracteres.
-            </div>
-          </div>
-
-          <!-- Campo para la contraseña -->
-          <div class="mb-3">
-            <label for="passwordHash" class="form-label text-dark">Password</label>
-            <input type="password" formControlName="passwordHash" class="form-control" id="passwordHash" required>
-            <div *ngIf="formRegister.get('passwordHash')?.invalid && formRegister.get('passwordHash')?.touched" class="text-danger">
-              La contraseña es obligatoria y debe tener al menos 6 caracteres.
-            </div>
-          </div>
-
-          <!-- Campo para la fecha de creación -->
-          <div class="mb-3">
-            <label for="createDate" class="form-label text-dark">Date</label>
-            <input type="datetime-local" formControlName="createDate" class="form-control" id="createDate" required>
-            <div *ngIf="formRegister.get('createDate')?.invalid && formRegister.get('createDate')?.touched" class="text-danger">
-              La fecha es obligatoria.
-            </div>
-          </div>
-
-          <!-- Botón para enviar los datos del nuevo usuario -->
-          <button type="submit" [disabled]="formRegister.invalid" class="btn btn-warning">Registrarse</button>
-
-        </form>
-      </div>
-
-    </div>
-  </div>
-</div>
 
     </div>
   </div>

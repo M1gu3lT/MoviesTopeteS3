@@ -18,4 +18,3 @@ namespace MT.Api.Model
 
   }
 }
-

@@ -1,23 +1,17 @@
-# -------------------------
-# Angular (ya lo tienes)
-# -------------------------
+# See https://docs.github.com/get-started/getting-started-with-git/ignoring-files for more about ignoring files.
+
+# Compiled output
 /dist
 /tmp
 /out-tsc
 /bazel-out
+
+# Node
 /node_modules
 npm-debug.log
 yarn-error.log
 
-/.angular/cache
-.sass-cache/
-/connect.lock
-/coverage
-/libpeerconnection.log
-testem.log
-/typings
-
-# IDEs
+# IDEs and editors
 .idea/
 .project
 .classpath
@@ -34,34 +28,15 @@ testem.log
 !.vscode/extensions.json
 .history/*
 
+# Miscellaneous
+/.angular/cache
+.sass-cache/
+/connect.lock
+/coverage
+/libpeerconnection.log
+testem.log
+/typings
+
 # System files
 .DS_Store
 Thumbs.db
-
-# -------------------------
-# .NET / C# / Visual Studio
-# -------------------------
-# User-specific files
-*.user
-*.suo
-
-# Build results
-bin/
-obj/
-
-# Visual Studio
-.vs/
-bin/
-obj/
-
-# Rider
-.idea/
-
-# Logs
-*.log
-
-# Others
-*.db-shm
-*.db-wal
-*.vsidx
-*.cache

@@ -31,55 +31,29 @@ export class LoginPagesComponent implements OnInit {
   // Declaro el formulario de login con dos campos (email y password)
   formLogin: FormGroup = new FormGroup({});
 
-  formRegister: FormGroup = new FormGroup({});
-
   // Inyecto el servicio de autenticación
   constructor(private authService: AuthService) {}
 
   // Cuando el componente se carga, inicializo el formulario con validaciones
   ngOnInit(): void {
-  // Inicializo el formulario de login
-  this.formLogin = new FormGroup({
-    email: new FormControl(
-      '', // Valor inicial vacío
-      [
-        Validators.required, // Campo obligatorio
-        Validators.email     // Tiene que tener formato de email
-      ]
-    ),
-    password: new FormControl(
-      '',
-      [
-        Validators.required,     // Campo obligatorio
-        Validators.minLength(6), // Mínimo 6 caracteres
-        Validators.maxLength(12) // Máximo 12 caracteres
-      ]
-    )
-  });
-
-  // Inicializo el formulario de registro (para el modal)
-  this.formRegister = new FormGroup({
-    Username: new FormControl(
-      '', 
-      [
-        Validators.required,     // Campo obligatorio
-        Validators.minLength(3)  // Mínimo 3 caracteres para el username
-      ]
-    ),
-    passwordHash: new FormControl(
-      '',
-      [
-        Validators.required,     // Campo obligatorio
-        Validators.minLength(6)  // Mínimo 6 caracteres para la contraseña
-      ]
-    ),
-    createDate: new FormControl(
-      '', 
-      Validators.required       // Campo obligatorio
-    )
-  });
-}
-
+    this.formLogin = new FormGroup({
+      email: new FormControl(
+        '', // Valor inicial vacío
+        [
+          Validators.required, // Campo obligatorio
+          Validators.email     // Tiene que tener formato de email
+        ]
+      ),
+      password: new FormControl(
+        '',
+        [
+          Validators.required,     // Campo obligatorio
+          Validators.minLength(6), // Mínimo 6 caracteres
+          Validators.maxLength(12) // Máximo 12 caracteres
+        ]
+      )
+    });
+  }
 
   // Cuando se hace submit del formulario, llamo a esta función
   sendLogin(): void {
@@ -117,18 +91,8 @@ export class LoginPagesComponent implements OnInit {
   // Cierro el modal
   closeModal() {
     if (this.userModal) {
-    this.userModal.nativeElement.style.display = 'none';
-  }
-  this.resetMTObj();
-}
-
-resetMTObj() {
-  this.MTObj = {
-    id: 0,
-    username: '',
-    passwordHash: '',
-    createDate: ''
-  };
+      this.userModal.nativeElement.style.display = 'none';
+    }
   }
 
   // Traigo todos los usuarios de la API
@@ -139,30 +103,9 @@ resetMTObj() {
   }
 
   // Envío el nuevo usuario a la API para registrarlo
-  // Cuando quiero guardar un nuevo usuario, hago un POST y luego actualizo la lista
   onSave() {
-  // Validación del formulario
-  if (this.formRegister.invalid) {
-    alert('Por favor, complete correctamente todos los campos');
-    return;
+    this.http.post("https://localhost:7278/api/MTMaster/", this.MTObj).subscribe((res: any) => {
+      this.MTList = res; // Actualizo la lista con lo que responde el servidor
+    });
   }
-
-  // Obtener datos del formulario reactivo
-  const newUser = this.formRegister.value;
-
-  // Enviar los datos a la API
-  this.http.post("https://localhost:7278/api/MTMaster/", newUser).subscribe({
-    next: (res) => {
-      this.getAllUsers();       // Actualiza la lista de usuarios
-      this.closeModal();        // Cierra el modal
-      this.formRegister.reset(); // Limpia el formulario
-    },
-    error: (err) => {
-      alert('Error al guardar usuario: ' + err.message);
-      console.error(err); // Muestra detalles en la consola para depuración
-    }
-  });
-}
-
-
 }
