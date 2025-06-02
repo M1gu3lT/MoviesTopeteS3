@@ -1,4 +1,5 @@
 // Importo lo necesario para hacer peticiones HTTP, manejar referencias a elementos HTML, y trabajar con formularios.
+import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { Component, ElementRef, inject, OnInit, ViewChild } from '@angular/core';
 import { FormsModule } from '@angular/forms';
@@ -6,11 +7,12 @@ import { FormsModule } from '@angular/forms';
 // Defino el componente y los módulos que utiliza
 @Component({
   selector: 'app-admin',
-  imports: [FormsModule],
+  imports: [FormsModule, CommonModule],
   templateUrl: './admin.component.html',
   styleUrl: './admin.component.scss'
 })
 export class AdminComponent implements OnInit {
+[x: string]: any;
 
   // Guardo la referencia al modal para abrirlo o cerrarlo manualmente
   @ViewChild('userModal') userModal: ElementRef | undefined;
@@ -64,12 +66,18 @@ export class AdminComponent implements OnInit {
   }
 
   // Si edito un usuario existente, hago un PUT y actualizo la lista también
-  onUpdate(){
-    this.http.put("https://localhost:7278/api/MTMaster/" + this.MTObj.MTId, this.MTObj).subscribe((res:any) =>{
+  onUpdate() {
+  if (!this.MTObj.id) {
+    console.error("ID del usuario no definido");
+    return;
+  }
+
+  this.http.put("https://localhost:7278/api/MTMaster/" + this.MTObj.id, this.MTObj)
+    .subscribe((res: any) => {
       this.getAllUsers();
       this.closeModal();
-    });
-  }
+    }); 
+}
 
   // Elimino un usuario después de confirmar con el usuario
   deleteUser(data: any){

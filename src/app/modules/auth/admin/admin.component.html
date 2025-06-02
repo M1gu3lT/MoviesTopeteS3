@@ -66,7 +66,7 @@
           <!-- Campo para la contraseña (aunque se almacena como hash) -->
           <div class="mb-3">
             <label for="passwordHash" class="form-label">Password</label>
-            <input type="text" [(ngModel)]="MTObj.passwordHash" class="form-control" id="passwordHash" required>
+            <input type="byte" [(ngModel)]="MTObj.passwordHash" class="form-control" id="passwordHash" required>
           </div>
 
           <!-- Campo para la fecha de creación del usuario -->
@@ -76,9 +76,7 @@
           </div>
 
           <!-- Dependiendo si el ID es negativo, decido si es nuevo usuario o actualización -->
-          @if(MTObj.id < 0){
+          
             <button type="button" (click)="onSave()" class="btn btn-primary">registrarse</button>
-          }@else {
-            <button type="button" (click)="onUpdate()" class="btn btn-warning">Actualizar</button>
-          }
+          
         </div>
