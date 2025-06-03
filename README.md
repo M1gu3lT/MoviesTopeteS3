@@ -8,19 +8,7 @@ profe la api que se utilizo es la de nombre MT.Api y en los archivos a nivel de 
 
 ## Objetivo
 
-El objetivo tras completar esta versión inicial de Movies Topete es continuar con el desarrollo de una plataforma integral para la gestión y consulta de contenido multimedia, fortaleciendo tanto su arquitectura como su funcionalidad.
-
-Se plantean los siguientes pasos a futuro:
-
-Implementar un sistema de autenticación segura utilizando JWT y control de acceso por roles.
-
-Reforzar la persistencia de datos mediante una base de datos MySQL gestionada con Entity Framework.
-
-Mejorar la experiencia de usuario incorporando una interfaz más moderna y adaptativa, mediante el uso de Angular Material o Tailwind CSS.
-
-Ampliar la cobertura de pruebas unitarias y de integración, tanto en el frontend (Jasmine/Karma) como en el backend con pruebas de API.
-
-panel de administración para CRUD completo.
+El objetivo de esta versión de **Movies Topete** es establecer las bases para una plataforma web de gestión de contenido multimedia, utilizando una arquitectura basada en ASP.NET Core y Angular. Se busca integrar un sistema funcional con autenticación básica, conexión con frontend moderno y documentación estandarizada.
 
 ---
 
@@ -30,18 +18,17 @@ MIGUEL TOPETE TORRES
 
 ---
 
+##Mockup Inicial
+
+![Mockup inicial](test/sprint5-capturas/mockupInicial.jpg)
+
+
+bastante diferente a lo que se lleva al momento
+
+
 ## 🖼️ Captura de Pantalla
 
-![Sección Admin](capturas%20del%20proyecto%20y%20test/sprint4-capturas/seccionAdministrador.jpg)
-
-![Sección Admin 2](capturas%20del%20proyecto%20y%20test/sprint4-capturas/seccionAdministrador2.jpg)
-
-![Sección Admin 3](capturas%20del%20proyecto%20y%20test/sprint4-capturas/seccionAdministrador3.jpg)
-
-![Sección Admin 4](capturas%20del%20proyecto%20y%20test/sprint4-capturas/seccionAdministrador4.jpg)
-![Sección Login](capturas%20del%20proyecto%20y%20test/sprint4-capturas/seccionLogin.jpg)
-
-![Conexión API](capturas%20del%20proyecto%20y%20test/sprint4-capturas/NetworkConexionApi.jpg)
+*****inghresar las capturas del sprint5
 
 
 ## ⚙️ Instrucciones de Instalación
@@ -104,31 +91,52 @@ Abre el archivo appsettings.json del backend y modifica el bloque ConnectionStri
 | IDE recomendado         | Visual Studio 2022 o VS Code |
 
 
-##🛠️ ¿Cómo se construyó?
-Frontend: Angular CLI v19, usando componentes, rutas y servicios.
+## 🛠️ ¿Cómo se construyó?
 
-Datos de películas: Se cargan desde archivos JSON con info como título, portada, año, director, etc.
+### 🧩 Frontend (Angular)
 
-Diseño responsivo: Se usó CSS Flexbox y media queries para adaptar a todos los tamaños de pantalla.
+- **Framework**: Angular CLI v16+  
+- **Estructura**: Uso de componentes, rutas, servicios y módulos.
+- **Consumo de API**: Comunicación directa con el backend mediante `HttpClient`.
+- **Diseño responsivo**: Aplicado con CSS Flexbox y media queries.
+- **Pruebas unitarias**: Implementadas con Jasmine y Karma.
+- **CORS**: Configurado para conexión segura desde `http://localhost:4200`.
 
-Pruebas: Se usó Jasmine y Karma para pruebas unitarias básicas.
+### ⚙️ Backend (ASP.NET Core)
 
-Backend (.NET)
-Framework: ASP.NET Core (.NET 6 o superior).
+- **Framework**: ASP.NET Core 7 (MVC/API).
+- **Lenguaje**: C#
+- **Arquitectura**: Controladores RESTful, con separación en capas.
+- **Base de datos**: Conectado mediante Entity Framework Core.
+- **Controladores**:
+  - `MTMasterController`: CRUD de usuarios.
+  - `WeatherForecastController`: Ejemplo base (puede eliminarse en producción).
+- **Autenticación**: Implementación básica de login con hash de contraseña.
+- **CORS Middleware**: Política `allowCors` para permitir peticiones desde Angular.
+- **Documentación**: Swagger UI habilitado para pruebas y visualización del API.
 
-API REST: CRUD para usuarios.
+### 🗃️ Base de Datos
 
-Consumo: Angular consume los endpoints vía HTTPClient.
+- **Motor**: SQL Server (LocalDB en desarrollo).
+- **ORM**: Entity Framework Core con enfoque Code First.
+- **Entidad principal**: `MTData` con campos:
+  - `id`, `Username`, `PasswordHash`, `CreateDate`
 
-Base de Datos (MySQL)
-Motor: MySQL Server (5.7 o superior).
+---
 
-Conexión: A través de Entity Framework Core.
+##Reporte de Code Coverage y Reporte de testing
+****FALTA REALIZARLO ;C
 
-Tablas: MTMaster para gestión de usuarios.
+##Diagrama Entidad-Relacion
 
-Script: Incluido para crear la tabla y campos básicos.
+##Mejoras Posibles
+**********
 
+##API-Swagger
+***********agregar captura y la url
+
+##Archivo de configuracion de ambiente, de docker y de kubernetes
+Falta Realizarlo
 
 ## 🐞 Problemas Conocidos
 ❌ Validación incompleta en el login: Actualmente no se muestran mensajes de error claros si los datos ingresados son inválidos.
