@@ -18,17 +18,22 @@ MIGUEL TOPETE TORRES
 
 ---
 
-##Mockup Inicial
+## Mockup Inicial
 
-![Mockup inicial](test/sprint5-capturas/mockupInicial.jpg)
-
+![Mockup inicial](capturas%20del%20proyecto%20y%20test/sprint5-capturas/mockupInicial.jpg)
 
 bastante diferente a lo que se lleva al momento
 
 
 ## 🖼️ Captura de Pantalla
 
-*****inghresar las capturas del sprint5
+![Login de nuevo usuario](capturas%del%proyecto%y%test/sprint5-capturas/MySQL-password.jpg)
+
+![Login de nuevo usuario](capturas%20del%20proyecto%20y%20test/sprint5-capturas/newUserLogin.jpg)
+
+![Login alternativo de usuario](capturas%20del%20proyecto%20y%20test/sprint5-capturas/newUserLogin2.jpg)
+
+![Login alternativo 3 de usuario](capturas%20del%20proyecto%20y%20test/sprint5-capturas/newUserLogin3.jpg)
 
 
 ## ⚙️ Instrucciones de Instalación
@@ -37,16 +42,16 @@ Sigue estos pasos para configurar y ejecutar el proyecto localmente:
 git clone https://github.com/tu_usuario/movies-topete.git
 cd movies-topete
 
-# 🧩 2. Instalar dependencias del frontend (Angular)
+### 🧩 2. Instalar dependencias del frontend (Angular)
 cd MT-ENTRETENIMIENTO
 npm install
 
-#▶️ 3. Iniciar el servidor Angular
+### ▶️ 3. Iniciar el servidor Angular
 ng serve
 
 Luego abre tu navegador en http://localhost:4200 y verás la aplicación en ejecución.
 
-##🖥️ Configuración del Backend (.NET + C# en Visual Studio)
+### 🖥️ Configuración del Backend (.NET + C# en Visual Studio)
 #📦 Requisitos
 Visual Studio 2022 (Community, Professional o Enterprise)
 
@@ -56,14 +61,14 @@ MySQL Server 8.0+
 
 MySQL Workbench (opcional pero recomendado)
 
-#🔧 1. Abrir el backend en Visual Studio
+# 🔧 1. Abrir el backend en Visual Studio
 Abre el archivo de solución MT-ENTRETENIMIENTO.sln.
 
 Espera a que Visual Studio restaure los paquetes NuGet.
 
 Asegúrate de que el proyecto MT.Api esté seleccionado como proyecto de inicio.
 
-#⚙️ 2. Configurar la cadena de conexión a MySQL
+# ⚙️ 2. Configurar la cadena de conexión a MySQL
 Abre el archivo appsettings.json del backend y modifica el bloque ConnectionStrings:
 "ConnectionStrings": {
   "DefaultConnection": "server=localhost;port=3306;database=nombre_de_tu_bd;user=root;password=tu_contraseña;"
@@ -124,35 +129,51 @@ Abre el archivo appsettings.json del backend y modifica el bloque ConnectionStri
 
 ---
 
-##Reporte de Code Coverage y Reporte de testing
+## Reporte de Code Coverage y Reporte de testing
 ****FALTA REALIZARLO ;C
 
-##Diagrama Entidad-Relacion
+## Diagrama Entidad-Relacion
 
-##Mejoras Posibles
-**********
+![Login alternativo 3 de usuario](capturas%del%proyecto%y%test/sprint5-capturas/diagramaEntidadRelacion.png)
 
-##API-Swagger
-***********agregar captura y la url
+## 🚀 Mejoras Posibles
+Añadir seguridad con login y control de usuarios.
 
-##Archivo de configuracion de ambiente, de docker y de kubernetes
+Mejorar la validación y mostrar mensajes claros de error.
+
+Proteger mejor las contraseñas.
+
+Manejar sesiones para evitar problemas de seguridad.
+
+Automatizar la configuración de la base de datos.
+
+Hacer más pruebas para asegurar que todo funcione bien.
+
+Completar la documentación para facilitar el uso.
+
+## API-Swagger
+![Login alternativo 3 de usuario](capturas%del%proyecto%y%test/sprint5-capturas/swaggerMTApi.jpg)
+
+localhosto:7278/swagger/index.html
+
+## Archivo de configuracion de ambiente, de docker y de kubernetes
 Falta Realizarlo
 
 ## 🐞 Problemas Conocidos
-❌ Validación incompleta en el login: Actualmente no se muestran mensajes de error claros si los datos ingresados son inválidos.
+❌ Validación incompleta en login: No se muestran mensajes claros de error ante datos inválidos.
 
-🔐 Falta de seguridad en la base de datos: Las contraseñas no están cifradas y no se aplican políticas de seguridad como control de acceso o autenticación robusta.
+🔐 Contraseñas almacenadas sin cifrado ni hash seguro, lo que representa un riesgo de seguridad.
 
-⚠️ Gestión de sesiones: No se implementa manejo de tokens ni protección contra ataques como CSRF o XSS.
-
+⚠️ No hay gestión de sesiones con tokens ni protección contra ataques CSRF o XSS.
 
 ## 🔍 Retrospectiva
 
-| ✅ ¿Qué hice bien?                                     | ⚠️ ¿Qué no salió bien?                                           | 🔄 ¿Qué puedo hacer diferente?                                                       |
-| ----------------------------------------------------- | ---------------------------------------------------------------- | ------------------------------------------------------------------------------------ |
-| Logré conectar correctamente Angular con la API REST  | Dificultades iniciales al configurar MySQL con Visual Studio     | Automatizar la configuración inicial de la base de datos con scripts SQL             |
-| Creé endpoints funcionales en .NET para el backend    | No implementé seguridad en los endpoints (sin autenticación JWT) | Añadir autenticación y validación de roles en el backend                             |
-| Aprendí a consumir servicios desde Angular            | Errores al mapear modelos entre C# y la base de datos            | Usar herramientas como Entity Framework con migraciones para evitar errores manuales |
-| Integración básica funcional entre frontend y backend | No hay validación fuerte de datos desde el backend               | Aplicar validaciones tanto del lado del cliente como del servidor                    |
-| Estructura limpia del backend con ASP.NET Core        | Poco tiempo invertido en testing y documentación técnica         | Añadir documentación Swagger y pruebas unitarias de los endpoints                    |
+| ✅ ¿Qué hice bien?                             | ⚠️ ¿Qué no salió bien?                                    | 🔄 ¿Qué puedo hacer diferente?                               |
+| --------------------------------------------- | --------------------------------------------------------- | ------------------------------------------------------------ |
+| Conexión exitosa entre Angular y API REST     | Dificultades al configurar MySQL con Visual Studio        | Automatizar la configuración de la base de datos con scripts |
+| Endpoints funcionales en .NET para el backend | No implementé autenticación ni seguridad en los endpoints | Implementar autenticación JWT y control de roles             |
+| Consumo correcto de servicios desde Angular   | Poco enfoque en testing y documentación     | Usar migraciones EF Core para evitar errores manuales        |
+| Integración básica entre frontend y backend   | Validación débil de datos en backend                      | Añadir validación robusta en frontend y backend              |
+| Backend bien estructurado con ASP.NET Core    |                    |          |
+
 
