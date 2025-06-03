@@ -3,6 +3,22 @@
   "WorkspaceRootPath": "C:\\Users\\migue\\Desktop\\liderly\\MT-ENTRETENIMIENTO\\MT-ENTRETENIMIENTO\\MT.Api\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{98D58F48-B257-4E8F-BABC-24800476B3D1}|MT.Api\\MT.Api.csproj|c:\\users\\migue\\desktop\\liderly\\mt-entretenimiento\\mt-entretenimiento\\mt.api\\mt.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{98D58F48-B257-4E8F-BABC-24800476B3D1}|MT.Api\\MT.Api.csproj|solutionrelative:mt.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{98D58F48-B257-4E8F-BABC-24800476B3D1}|MT.Api\\MT.Api.csproj|c:\\users\\migue\\desktop\\liderly\\mt-entretenimiento\\mt-entretenimiento\\mt.api\\mt.api\\model\\mtdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{98D58F48-B257-4E8F-BABC-24800476B3D1}|MT.Api\\MT.Api.csproj|solutionrelative:mt.api\\model\\mtdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{98D58F48-B257-4E8F-BABC-24800476B3D1}|MT.Api\\MT.Api.csproj|c:\\users\\migue\\desktop\\liderly\\mt-entretenimiento\\mt-entretenimiento\\mt.api\\mt.api\\model\\mtdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{98D58F48-B257-4E8F-BABC-24800476B3D1}|MT.Api\\MT.Api.csproj|solutionrelative:mt.api\\model\\mtdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{98D58F48-B257-4E8F-BABC-24800476B3D1}|MT.Api\\MT.Api.csproj|c:\\users\\migue\\desktop\\liderly\\mt-entretenimiento\\mt-entretenimiento\\mt.api\\mt.api\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{98D58F48-B257-4E8F-BABC-24800476B3D1}|MT.Api\\MT.Api.csproj|solutionrelative:mt.api\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{98D58F48-B257-4E8F-BABC-24800476B3D1}|MT.Api\\MT.Api.csproj|c:\\users\\migue\\desktop\\liderly\\mt-entretenimiento\\mt-entretenimiento\\mt.api\\mt.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{98D58F48-B257-4E8F-BABC-24800476B3D1}|MT.Api\\MT.Api.csproj|solutionrelative:mt.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     }
@@ -19,6 +35,58 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\migue\\Desktop\\liderly\\MT-ENTRETENIMIENTO\\MT-ENTRETENIMIENTO\\MT.Api\\MT.Api\\Program.cs",
+              "RelativeDocumentMoniker": "MT.Api\\Program.cs",
+              "ToolTip": "C:\\Users\\migue\\Desktop\\liderly\\MT-ENTRETENIMIENTO\\MT-ENTRETENIMIENTO\\MT.Api\\MT.Api\\Program.cs",
+              "RelativeToolTip": "MT.Api\\Program.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAAC4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-03T03:30:38.623Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MTDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\migue\\Desktop\\liderly\\MT-ENTRETENIMIENTO\\MT-ENTRETENIMIENTO\\MT.Api\\MT.Api\\Model\\MTDbContext.cs",
+              "RelativeDocumentMoniker": "MT.Api\\Model\\MTDbContext.cs",
+              "ToolTip": "C:\\Users\\migue\\Desktop\\liderly\\MT-ENTRETENIMIENTO\\MT-ENTRETENIMIENTO\\MT.Api\\MT.Api\\Model\\MTDbContext.cs",
+              "RelativeToolTip": "MT.Api\\Model\\MTDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-03T03:30:31.563Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MTData.cs",
+              "DocumentMoniker": "C:\\Users\\migue\\Desktop\\liderly\\MT-ENTRETENIMIENTO\\MT-ENTRETENIMIENTO\\MT.Api\\MT.Api\\Model\\MTData.cs",
+              "RelativeDocumentMoniker": "MT.Api\\Model\\MTData.cs",
+              "ToolTip": "C:\\Users\\migue\\Desktop\\liderly\\MT-ENTRETENIMIENTO\\MT-ENTRETENIMIENTO\\MT.Api\\MT.Api\\Model\\MTData.cs",
+              "RelativeToolTip": "MT.Api\\Model\\MTData.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAowBQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-03T03:30:20.587Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "WeatherForecastController.cs",
+              "DocumentMoniker": "C:\\Users\\migue\\Desktop\\liderly\\MT-ENTRETENIMIENTO\\MT-ENTRETENIMIENTO\\MT.Api\\MT.Api\\Controllers\\WeatherForecastController.cs",
+              "RelativeDocumentMoniker": "MT.Api\\Controllers\\WeatherForecastController.cs",
+              "ToolTip": "C:\\Users\\migue\\Desktop\\liderly\\MT-ENTRETENIMIENTO\\MT-ENTRETENIMIENTO\\MT.Api\\MT.Api\\Controllers\\WeatherForecastController.cs",
+              "RelativeToolTip": "MT.Api\\Controllers\\WeatherForecastController.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAcwCEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-03T03:30:07.25Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\migue\\Desktop\\liderly\\MT-ENTRETENIMIENTO\\MT-ENTRETENIMIENTO\\MT.Api\\MT.Api\\appsettings.json",
               "RelativeDocumentMoniker": "MT.Api\\appsettings.json",
