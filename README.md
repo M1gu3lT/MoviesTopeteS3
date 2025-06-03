@@ -27,7 +27,7 @@ bastante diferente a lo que se lleva al momento
 
 ## 🖼️ Captura de Pantalla
 
-![Login de nuevo usuario](capturas%del%proyecto%y%test/sprint5-capturas/MySQL-password.jpg)
+![Login de nuevo usuario](capturas%20del%20proyecto%20y%20test/sprint5-capturas/MySQL-password.jpg)
 
 ![Login de nuevo usuario](capturas%20del%20proyecto%20y%20test/sprint5-capturas/newUserLogin.jpg)
 
@@ -134,7 +134,7 @@ Abre el archivo appsettings.json del backend y modifica el bloque ConnectionStri
 
 ## Diagrama Entidad-Relacion
 
-![Login alternativo 3 de usuario](capturas%del%proyecto%y%test/sprint5-capturas/diagramaEntidadRelacion.png)
+![Diagrama ER](capturas%20del%20proyecto%20y%20test/sprint5-capturas/diagramaEntidadRelacion.png?raw=true)
 
 ## 🚀 Mejoras Posibles
 Añadir seguridad con login y control de usuarios.
@@ -152,12 +152,13 @@ Hacer más pruebas para asegurar que todo funcione bien.
 Completar la documentación para facilitar el uso.
 
 ## API-Swagger
-![Login alternativo 3 de usuario](capturas%del%proyecto%y%test/sprint5-capturas/swaggerMTApi.jpg)
+![Swagger MT.Api](capturas%20del%20proyecto%20y%20test/sprint5-capturas/swaggerMTApi.jpg?raw=true)
+
 
 localhosto:7278/swagger/index.html
 
 ## Archivo de configuracion de ambiente, de docker y de kubernetes
-Falta Realizarlo
+******Falta Realizarlo
 
 ## 🐞 Problemas Conocidos
 ❌ Validación incompleta en login: No se muestran mensajes claros de error ante datos inválidos.
