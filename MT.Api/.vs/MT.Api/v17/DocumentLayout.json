@@ -55,8 +55,7 @@
               "RelativeToolTip": "MT.Api\\Model\\MTDbContext.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T03:30:31.563Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-03T03:30:31.563Z"
             },
             {
               "$type": "Document",
@@ -68,8 +67,7 @@
               "RelativeToolTip": "MT.Api\\Model\\MTData.cs",
               "ViewState": "AgIAAAEAAAAAAAAAAAAowBQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T03:30:20.587Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-03T03:30:20.587Z"
             },
             {
               "$type": "Document",
@@ -81,8 +79,7 @@
               "RelativeToolTip": "MT.Api\\Controllers\\WeatherForecastController.cs",
               "ViewState": "AgIAAAwAAAAAAAAAAAAcwCEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T03:30:07.25Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-03T03:30:07.25Z"
             },
             {
               "$type": "Document",
@@ -94,8 +91,7 @@
               "RelativeToolTip": "MT.Api\\appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-06-03T02:04:33.145Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-03T02:04:33.145Z"
             }
           ]
         }
